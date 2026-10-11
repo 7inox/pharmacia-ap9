@@ -1,0 +1,25 @@
+{
+  "ruta": "ventas",
+  "metodo": "Post",
+  "id": "V-06",
+  "respuesta": {
+    "timestamp": "2026-10-11T09:52:26.0363001",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Existen errores de validación",
+    "path": "/api/v1/ventas",
+    "validationErrors": {
+      "detalles[0].cantidad": "La cantidad debe ser mayor que cero"
+    }
+  },
+  "http": 400,
+  "solicitud": {
+    "detalles": [
+      {
+        "productoId": 41,
+        "cantidad": -1
+      }
+    ],
+    "clienteId": 21
+  }
+}

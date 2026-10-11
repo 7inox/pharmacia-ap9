@@ -1,0 +1,5089 @@
+{
+  "fecha": "2026-10-04T16:46:10.134Z",
+  "marca": "Auto S8 343626",
+  "resultados": [
+    {
+      "id": "A-01",
+      "operacion": "Alta válida",
+      "precondicion": "Categoría activa existente",
+      "datos": "nombre=AA Auto S8 343626 A01 válido; precio=5.5; stock=10; categoriaId=92",
+      "esperado": "201 y producto con categoría visible",
+      "obtenido": "SPA guardó, HTTP 201; categoría visible.",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-01_spa.png",
+        "A-01_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A01 válido\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":92}",
+          "status": 201,
+          "response": {
+            "id": 32,
+            "nombre": "AA Auto S8 343626 A01 válido",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 92,
+            "categoriaNombre": "Auto S8 343626 activa",
+            "fechaCreacion": "2026-10-04T11:45:49.2407117",
+            "fechaModificacion": null
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/categorias",
+          "status": 200,
+          "response": [
+            {
+              "id": 81,
+              "nombre": "S8 Evidencia activa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.4962823",
+              "fechaModificacion": "2026-10-04T11:18:17.4962823"
+            },
+            {
+              "id": 82,
+              "nombre": "S8 Evidencia alternativa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.5676979",
+              "fechaModificacion": "2026-10-04T11:18:17.5676979"
+            },
+            {
+              "id": 83,
+              "nombre": "S8 Evidencia inactiva",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:18:17.5808047",
+              "fechaModificacion": "2026-10-04T11:18:17.5808047"
+            },
+            {
+              "id": 84,
+              "nombre": "Auto S8 956404 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4624873",
+              "fechaModificacion": "2026-10-04T11:39:16.4624873"
+            },
+            {
+              "id": 85,
+              "nombre": "Auto S8 956404 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.485331",
+              "fechaModificacion": "2026-10-04T11:39:16.485331"
+            },
+            {
+              "id": 86,
+              "nombre": "Auto S8 956404 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4971102",
+              "fechaModificacion": "2026-10-04T11:39:16.4971102"
+            },
+            {
+              "id": 87,
+              "nombre": "Auto S8 956404 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5100442",
+              "fechaModificacion": "2026-10-04T11:39:16.5100442"
+            },
+            {
+              "id": 88,
+              "nombre": "Auto S8 956404 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5212582",
+              "fechaModificacion": "2026-10-04T11:39:16.5212582"
+            },
+            {
+              "id": 89,
+              "nombre": "Auto S8 956404 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5322639",
+              "fechaModificacion": "2026-10-04T11:39:16.5322639"
+            },
+            {
+              "id": 90,
+              "nombre": "Auto S8 956404 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5439677",
+              "fechaModificacion": "2026-10-04T11:39:16.5439677"
+            },
+            {
+              "id": 91,
+              "nombre": "Auto S8 956404 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5558541",
+              "fechaModificacion": "2026-10-04T11:39:16.5558541"
+            },
+            {
+              "id": 92,
+              "nombre": "Auto S8 343626 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6787315",
+              "fechaModificacion": "2026-10-04T11:45:43.6787315"
+            },
+            {
+              "id": 93,
+              "nombre": "Auto S8 343626 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6966288",
+              "fechaModificacion": "2026-10-04T11:45:43.6966288"
+            },
+            {
+              "id": 94,
+              "nombre": "Auto S8 343626 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7085446",
+              "fechaModificacion": "2026-10-04T11:45:43.7085446"
+            },
+            {
+              "id": 95,
+              "nombre": "Auto S8 343626 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7203541",
+              "fechaModificacion": "2026-10-04T11:45:43.7203541"
+            },
+            {
+              "id": 96,
+              "nombre": "Auto S8 343626 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7311389",
+              "fechaModificacion": "2026-10-04T11:45:43.7311389"
+            },
+            {
+              "id": 97,
+              "nombre": "Auto S8 343626 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7428855",
+              "fechaModificacion": "2026-10-04T11:45:43.7428855"
+            },
+            {
+              "id": 98,
+              "nombre": "Auto S8 343626 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7557528",
+              "fechaModificacion": "2026-10-04T11:45:43.7557528"
+            },
+            {
+              "id": 99,
+              "nombre": "Auto S8 343626 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7677415",
+              "fechaModificacion": "2026-10-04T11:45:43.7677415"
+            },
+            {
+              "id": 25,
+              "nombre": "Analgésicos",
+              "descripcion": "Para el dolor",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:09:43.5749471",
+              "fechaModificacion": "2026-10-01T11:10:01.906835"
+            },
+            {
+              "id": 26,
+              "nombre": "Antiinflamatorios",
+              "descripcion": "Productos para el manejo de procesos inflamatorios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1089479",
+              "fechaModificacion": "2026-10-01T11:17:18.1089479"
+            },
+            {
+              "id": 27,
+              "nombre": "Antibióticos",
+              "descripcion": "Medicamentos antibacterianos sujetos a prescripción.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.129386",
+              "fechaModificacion": "2026-10-01T11:17:18.129386"
+            },
+            {
+              "id": 28,
+              "nombre": "Antialérgicos",
+              "descripcion": "Productos para el manejo de síntomas alérgicos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1439963",
+              "fechaModificacion": "2026-10-01T11:17:18.1439963"
+            },
+            {
+              "id": 29,
+              "nombre": "Antigripales",
+              "descripcion": "Productos para síntomas de resfriado y gripe.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.155431",
+              "fechaModificacion": "2026-10-01T11:17:18.155431"
+            },
+            {
+              "id": 30,
+              "nombre": "Antipiréticos",
+              "descripcion": "Medicamentos utilizados para el control de la fiebre.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1664724",
+              "fechaModificacion": "2026-10-01T11:17:18.1664724"
+            },
+            {
+              "id": 31,
+              "nombre": "Antihipertensivos",
+              "descripcion": "Medicamentos de prescripción para la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1794536",
+              "fechaModificacion": "2026-10-01T11:17:18.1794536"
+            },
+            {
+              "id": 32,
+              "nombre": "Antidiabéticos",
+              "descripcion": "Medicamentos de prescripción para el control de la diabetes.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1925318",
+              "fechaModificacion": "2026-10-01T11:17:18.1925318"
+            },
+            {
+              "id": 33,
+              "nombre": "Salud digestiva",
+              "descripcion": "Productos relacionados con el cuidado digestivo.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2058072",
+              "fechaModificacion": "2026-10-01T11:17:18.2058072"
+            },
+            {
+              "id": 34,
+              "nombre": "Vitaminas y minerales",
+              "descripcion": "Suplementos vitamínicos y minerales.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2182482",
+              "fechaModificacion": "2026-10-01T11:17:18.2182482"
+            },
+            {
+              "id": 35,
+              "nombre": "Cuidado respiratorio",
+              "descripcion": "Productos para el cuidado del sistema respiratorio.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2325131",
+              "fechaModificacion": "2026-10-01T11:17:18.2325131"
+            },
+            {
+              "id": 36,
+              "nombre": "Cuidado dermatológico",
+              "descripcion": "Productos para el cuidado de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2462819",
+              "fechaModificacion": "2026-10-01T11:17:18.2462819"
+            },
+            {
+              "id": 37,
+              "nombre": "Cuidado oftálmico",
+              "descripcion": "Productos para el cuidado de los ojos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2611217",
+              "fechaModificacion": "2026-10-01T11:17:18.2611217"
+            },
+            {
+              "id": 38,
+              "nombre": "Cuidado bucal",
+              "descripcion": "Productos para higiene y cuidado de la boca.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2744841",
+              "fechaModificacion": "2026-10-01T11:17:18.2744841"
+            },
+            {
+              "id": 39,
+              "nombre": "Higiene personal",
+              "descripcion": "Productos de higiene de uso cotidiano.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2883222",
+              "fechaModificacion": "2026-10-01T11:17:18.2883222"
+            },
+            {
+              "id": 40,
+              "nombre": "Primeros auxilios",
+              "descripcion": "Materiales e insumos para primeros auxilios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3032309",
+              "fechaModificacion": "2026-10-01T11:17:18.3032309"
+            },
+            {
+              "id": 41,
+              "nombre": "Material médico",
+              "descripcion": "Insumos y accesorios de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3193439",
+              "fechaModificacion": "2026-10-01T11:17:18.3193439"
+            },
+            {
+              "id": 42,
+              "nombre": "Cuidado infantil",
+              "descripcion": "Productos de cuidado e higiene infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3363997",
+              "fechaModificacion": "2026-10-01T11:17:18.3363997"
+            },
+            {
+              "id": 43,
+              "nombre": "Protección solar",
+              "descripcion": "Productos de protección frente a la radiación solar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3504557",
+              "fechaModificacion": "2026-10-01T11:17:18.3504557"
+            },
+            {
+              "id": 44,
+              "nombre": "Salud y bienestar",
+              "descripcion": "Productos complementarios de cuidado personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3633352",
+              "fechaModificacion": "2026-10-01T11:17:18.3633352"
+            },
+            {
+              "id": 45,
+              "nombre": "Antisépticos",
+              "descripcion": "Productos para antisepsia y limpieza.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6010498",
+              "fechaModificacion": "2026-10-01T11:18:03.6010498"
+            },
+            {
+              "id": 46,
+              "nombre": "Desinfectantes",
+              "descripcion": "Productos para desinfección de superficies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.618147",
+              "fechaModificacion": "2026-10-01T11:18:03.618147"
+            },
+            {
+              "id": 47,
+              "nombre": "Gasas y apósitos",
+              "descripcion": "Materiales para cobertura y cuidado de heridas.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6328737",
+              "fechaModificacion": "2026-10-01T11:18:03.6328737"
+            },
+            {
+              "id": 48,
+              "nombre": "Vendas y cintas médicas",
+              "descripcion": "Materiales para sujeción y protección.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6451615",
+              "fechaModificacion": "2026-10-01T11:18:03.6451615"
+            },
+            {
+              "id": 49,
+              "nombre": "Guantes de uso sanitario",
+              "descripcion": "Guantes y accesorios de protección sanitaria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6566967",
+              "fechaModificacion": "2026-10-01T11:18:03.6566967"
+            },
+            {
+              "id": 50,
+              "nombre": "Mascarillas",
+              "descripcion": "Mascarillas y protección respiratoria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6684134",
+              "fechaModificacion": "2026-10-01T11:18:03.6684134"
+            },
+            {
+              "id": 51,
+              "nombre": "Termómetros",
+              "descripcion": "Instrumentos para medir la temperatura corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6798918",
+              "fechaModificacion": "2026-10-01T11:18:03.6798918"
+            },
+            {
+              "id": 52,
+              "nombre": "Tensiómetros",
+              "descripcion": "Equipos para medir la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6907717",
+              "fechaModificacion": "2026-10-01T11:18:03.6907717"
+            },
+            {
+              "id": 53,
+              "nombre": "Glucómetros",
+              "descripcion": "Equipos y accesorios para medición de glucosa.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7015084",
+              "fechaModificacion": "2026-10-01T11:18:03.7015084"
+            },
+            {
+              "id": 54,
+              "nombre": "Nebulizadores",
+              "descripcion": "Equipos y accesorios de nebulización.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7140362",
+              "fechaModificacion": "2026-10-01T11:18:03.7140362"
+            },
+            {
+              "id": 55,
+              "nombre": "Jeringas y agujas",
+              "descripcion": "Insumos de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7263375",
+              "fechaModificacion": "2026-10-01T11:18:03.7263375"
+            },
+            {
+              "id": 56,
+              "nombre": "Soluciones salinas",
+              "descripcion": "Soluciones salinas según su presentación y uso.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.739422",
+              "fechaModificacion": "2026-10-01T11:18:03.739422"
+            },
+            {
+              "id": 57,
+              "nombre": "Cuidado del cabello",
+              "descripcion": "Productos de higiene y cuidado capilar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7518774",
+              "fechaModificacion": "2026-10-01T11:18:03.7518774"
+            },
+            {
+              "id": 58,
+              "nombre": "Champús",
+              "descripcion": "Productos para limpieza del cabello.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7647604",
+              "fechaModificacion": "2026-10-01T11:18:03.7647604"
+            },
+            {
+              "id": 59,
+              "nombre": "Jabones",
+              "descripcion": "Jabones de higiene personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7801517",
+              "fechaModificacion": "2026-10-01T11:18:03.7801517"
+            },
+            {
+              "id": 60,
+              "nombre": "Desodorantes",
+              "descripcion": "Productos de higiene y cuidado corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8051827",
+              "fechaModificacion": "2026-10-01T11:18:03.8051827"
+            },
+            {
+              "id": 61,
+              "nombre": "Cremas hidratantes",
+              "descripcion": "Productos para hidratación de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8190271",
+              "fechaModificacion": "2026-10-01T11:18:03.8190271"
+            },
+            {
+              "id": 62,
+              "nombre": "Cuidado de los labios",
+              "descripcion": "Bálsamos y productos de cuidado labial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8327306",
+              "fechaModificacion": "2026-10-01T11:18:03.8327306"
+            },
+            {
+              "id": 63,
+              "nombre": "Higiene íntima",
+              "descripcion": "Productos de higiene íntima.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8454155",
+              "fechaModificacion": "2026-10-01T11:18:03.8454155"
+            },
+            {
+              "id": 64,
+              "nombre": "Higiene femenina",
+              "descripcion": "Productos de cuidado e higiene femenina.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8571555",
+              "fechaModificacion": "2026-10-01T11:18:03.8571555"
+            },
+            {
+              "id": 65,
+              "nombre": "Pañales infantiles",
+              "descripcion": "Pañales para cuidado infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8690497",
+              "fechaModificacion": "2026-10-01T11:18:03.8690497"
+            },
+            {
+              "id": 66,
+              "nombre": "Pañales para adultos",
+              "descripcion": "Pañales para cuidado de adultos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8809374",
+              "fechaModificacion": "2026-10-01T11:18:03.8809374"
+            },
+            {
+              "id": 67,
+              "nombre": "Toallitas húmedas",
+              "descripcion": "Productos para limpieza e higiene.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8916771",
+              "fechaModificacion": "2026-10-01T11:18:03.8916771"
+            },
+            {
+              "id": 68,
+              "nombre": "Cuidado del bebé",
+              "descripcion": "Accesorios y productos de cuidado del bebé.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9031635",
+              "fechaModificacion": "2026-10-01T11:18:03.9031635"
+            },
+            {
+              "id": 69,
+              "nombre": "Accesorios de lactancia",
+              "descripcion": "Accesorios para lactancia y alimentación infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9159966",
+              "fechaModificacion": "2026-10-01T11:18:03.9159966"
+            },
+            {
+              "id": 70,
+              "nombre": "Cuidado de los pies",
+              "descripcion": "Productos de higiene y cuidado de los pies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9286536",
+              "fechaModificacion": "2026-10-01T11:18:03.9286536"
+            },
+            {
+              "id": 71,
+              "nombre": "Cuidado de las manos",
+              "descripcion": "Productos de limpieza e hidratación de manos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9410714",
+              "fechaModificacion": "2026-10-01T11:18:03.9410714"
+            },
+            {
+              "id": 72,
+              "nombre": "Higiene dental",
+              "descripcion": "Cepillos, pastas y accesorios de limpieza dental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9523069",
+              "fechaModificacion": "2026-10-01T11:18:03.9523069"
+            },
+            {
+              "id": 73,
+              "nombre": "Hilo dental",
+              "descripcion": "Productos para limpieza interdental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9623979",
+              "fechaModificacion": "2026-10-01T11:18:03.9623979"
+            },
+            {
+              "id": 74,
+              "nombre": "Enjuagues bucales",
+              "descripcion": "Productos complementarios de higiene bucal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9733472",
+              "fechaModificacion": "2026-10-01T11:18:03.9733472"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/productos?pagina=0&tamanio=10&ordenarPor=nombre&direccion=asc",
+          "status": 200,
+          "response": {
+            "contenido": [
+              {
+                "id": 32,
+                "nombre": "AA Auto S8 343626 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:49.2407117",
+                "fechaModificacion": null
+              },
+              {
+                "id": 29,
+                "nombre": "AA Auto S8 343626 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:45:43.8516996",
+                "fechaModificacion": null
+              },
+              {
+                "id": 27,
+                "nombre": "AA Auto S8 343626 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 99,
+                "categoriaNombre": "Auto S8 343626 historial",
+                "fechaCreacion": "2026-10-04T11:45:43.8258119",
+                "fechaModificacion": null
+              },
+              {
+                "id": 26,
+                "nombre": "AA Auto S8 343626 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 94,
+                "categoriaNombre": "Auto S8 343626 tercera",
+                "fechaCreacion": "2026-10-04T11:45:43.8129366",
+                "fechaModificacion": null
+              },
+              {
+                "id": 24,
+                "nombre": "AA Auto S8 343626 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.7838122",
+                "fechaModificacion": null
+              },
+              {
+                "id": 25,
+                "nombre": "AA Auto S8 343626 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.7992839",
+                "fechaModificacion": null
+              },
+              {
+                "id": 31,
+                "nombre": "AA Auto S8 343626 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.8780049",
+                "fechaModificacion": null
+              },
+              {
+                "id": 30,
+                "nombre": "AA Auto S8 343626 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.865391",
+                "fechaModificacion": null
+              },
+              {
+                "id": 28,
+                "nombre": "AA Auto S8 343626 venta",
+                "precio": 9.5,
+                "stock": 14,
+                "estado": true,
+                "categoriaId": 96,
+                "categoriaNombre": "Auto S8 343626 ventas",
+                "fechaCreacion": "2026-10-04T11:45:43.8385711",
+                "fechaModificacion": null
+              },
+              {
+                "id": 23,
+                "nombre": "AA Auto S8 956404 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 84,
+                "categoriaNombre": "Auto S8 956404 activa",
+                "fechaCreacion": "2026-10-04T11:44:07.7251401",
+                "fechaModificacion": null
+              }
+            ],
+            "pagina": 0,
+            "tamanio": 10,
+            "totalElementos": 31,
+            "totalPaginas": 4,
+            "ultima": false
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/productos?tamanio=100",
+          "status": 200,
+          "response": {
+            "contenido": [
+              {
+                "id": 32,
+                "nombre": "AA Auto S8 343626 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:49.2407117",
+                "fechaModificacion": null
+              },
+              {
+                "id": 29,
+                "nombre": "AA Auto S8 343626 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:45:43.8516996",
+                "fechaModificacion": null
+              },
+              {
+                "id": 27,
+                "nombre": "AA Auto S8 343626 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 99,
+                "categoriaNombre": "Auto S8 343626 historial",
+                "fechaCreacion": "2026-10-04T11:45:43.8258119",
+                "fechaModificacion": null
+              },
+              {
+                "id": 26,
+                "nombre": "AA Auto S8 343626 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 94,
+                "categoriaNombre": "Auto S8 343626 tercera",
+                "fechaCreacion": "2026-10-04T11:45:43.8129366",
+                "fechaModificacion": null
+              },
+              {
+                "id": 24,
+                "nombre": "AA Auto S8 343626 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.7838122",
+                "fechaModificacion": null
+              },
+              {
+                "id": 25,
+                "nombre": "AA Auto S8 343626 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.7992839",
+                "fechaModificacion": null
+              },
+              {
+                "id": 31,
+                "nombre": "AA Auto S8 343626 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.8780049",
+                "fechaModificacion": null
+              },
+              {
+                "id": 30,
+                "nombre": "AA Auto S8 343626 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.865391",
+                "fechaModificacion": null
+              },
+              {
+                "id": 28,
+                "nombre": "AA Auto S8 343626 venta",
+                "precio": 9.5,
+                "stock": 14,
+                "estado": true,
+                "categoriaId": 96,
+                "categoriaNombre": "Auto S8 343626 ventas",
+                "fechaCreacion": "2026-10-04T11:45:43.8385711",
+                "fechaModificacion": null
+              },
+              {
+                "id": 23,
+                "nombre": "AA Auto S8 956404 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 84,
+                "categoriaNombre": "Auto S8 956404 activa",
+                "fechaCreacion": "2026-10-04T11:44:07.7251401",
+                "fechaModificacion": null
+              },
+              {
+                "id": 33,
+                "nombre": "AA Auto S8 956404 A04 categoría inactiva",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 87,
+                "categoriaNombre": "Auto S8 956404 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:49.8728104",
+                "fechaModificacion": null
+              },
+              {
+                "id": 20,
+                "nombre": "AA Auto S8 956404 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 89,
+                "categoriaNombre": "Auto S8 956404 carrera",
+                "fechaCreacion": "2026-10-04T11:39:16.631525",
+                "fechaModificacion": null
+              },
+              {
+                "id": 18,
+                "nombre": "AA Auto S8 956404 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 91,
+                "categoriaNombre": "Auto S8 956404 historial",
+                "fechaCreacion": "2026-10-04T11:39:16.6081062",
+                "fechaModificacion": null
+              },
+              {
+                "id": 17,
+                "nombre": "AA Auto S8 956404 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 86,
+                "categoriaNombre": "Auto S8 956404 tercera",
+                "fechaCreacion": "2026-10-04T11:39:16.5957768",
+                "fechaModificacion": null
+              },
+              {
+                "id": 15,
+                "nombre": "AA Auto S8 956404 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 84,
+                "categoriaNombre": "Auto S8 956404 activa",
+                "fechaCreacion": "2026-10-04T11:39:16.5689006",
+                "fechaModificacion": null
+              },
+              {
+                "id": 16,
+                "nombre": "AA Auto S8 956404 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 85,
+                "categoriaNombre": "Auto S8 956404 otra",
+                "fechaCreacion": "2026-10-04T11:39:16.5818545",
+                "fechaModificacion": null
+              },
+              {
+                "id": 22,
+                "nombre": "AA Auto S8 956404 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 85,
+                "categoriaNombre": "Auto S8 956404 otra",
+                "fechaCreacion": "2026-10-04T11:39:16.6566272",
+                "fechaModificacion": null
+              },
+              {
+                "id": 21,
+                "nombre": "AA Auto S8 956404 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 84,
+                "categoriaNombre": "Auto S8 956404 activa",
+                "fechaCreacion": "2026-10-04T11:39:16.6432891",
+                "fechaModificacion": null
+              },
+              {
+                "id": 19,
+                "nombre": "AA Auto S8 956404 venta",
+                "precio": 9.5,
+                "stock": 14,
+                "estado": true,
+                "categoriaId": 88,
+                "categoriaNombre": "Auto S8 956404 ventas",
+                "fechaCreacion": "2026-10-04T11:39:16.620717",
+                "fechaModificacion": null
+              },
+              {
+                "id": 14,
+                "nombre": "AAA S8 00 Registro evidencia",
+                "precio": 18.5,
+                "stock": 25,
+                "estado": false,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:22:29.4526228",
+                "fechaModificacion": "2026-10-04T11:22:35.2122205"
+              },
+              {
+                "id": 2,
+                "nombre": "AAA S8 01 Producto de prueba",
+                "precio": 1.5,
+                "stock": 3,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.4473352",
+                "fechaModificacion": "2026-10-04T11:22:33.6885561"
+              },
+              {
+                "id": 3,
+                "nombre": "AAA S8 02 Producto de prueba",
+                "precio": 2.5,
+                "stock": 6,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.4715894",
+                "fechaModificacion": null
+              },
+              {
+                "id": 4,
+                "nombre": "AAA S8 03 Producto de prueba",
+                "precio": 3.5,
+                "stock": 9,
+                "estado": true,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:35.4852743",
+                "fechaModificacion": null
+              },
+              {
+                "id": 5,
+                "nombre": "AAA S8 04 Producto de prueba",
+                "precio": 4.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.4997101",
+                "fechaModificacion": null
+              },
+              {
+                "id": 6,
+                "nombre": "AAA S8 05 Producto de prueba",
+                "precio": 5.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:35.5131102",
+                "fechaModificacion": null
+              },
+              {
+                "id": 7,
+                "nombre": "AAA S8 06 Producto de prueba",
+                "precio": 6.5,
+                "stock": 18,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.5258264",
+                "fechaModificacion": null
+              },
+              {
+                "id": 8,
+                "nombre": "AAA S8 07 Producto de prueba",
+                "precio": 7.5,
+                "stock": 21,
+                "estado": true,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:35.5387533",
+                "fechaModificacion": null
+              },
+              {
+                "id": 9,
+                "nombre": "AAA S8 08 Producto de prueba",
+                "precio": 8.5,
+                "stock": 24,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.5516193",
+                "fechaModificacion": null
+              },
+              {
+                "id": 10,
+                "nombre": "AAA S8 09 Producto de prueba",
+                "precio": 9.5,
+                "stock": 27,
+                "estado": true,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:35.5629141",
+                "fechaModificacion": null
+              },
+              {
+                "id": 11,
+                "nombre": "AAA S8 10 Producto de prueba",
+                "precio": 10.5,
+                "stock": 30,
+                "estado": true,
+                "categoriaId": 82,
+                "categoriaNombre": "S8 Evidencia alternativa",
+                "fechaCreacion": "2026-10-04T11:20:35.5756059",
+                "fechaModificacion": null
+              },
+              {
+                "id": 12,
+                "nombre": "AAA S8 11 Producto de prueba",
+                "precio": 11.5,
+                "stock": 33,
+                "estado": true,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:35.5890607",
+                "fechaModificacion": null
+              },
+              {
+                "id": 13,
+                "nombre": "ZZZ S8 Registro anterior evidencia",
+                "precio": 18.5,
+                "stock": 25,
+                "estado": false,
+                "categoriaId": 81,
+                "categoriaNombre": "S8 Evidencia activa",
+                "fechaCreacion": "2026-10-04T11:20:44.9449072",
+                "fechaModificacion": "2026-10-04T11:22:20.3141298"
+              }
+            ],
+            "pagina": 0,
+            "tamanio": 100,
+            "totalElementos": 32,
+            "totalPaginas": 1,
+            "ultima": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "operacion": "Alta sin categoría",
+      "precondicion": "Formulario nuevo; ninguna categoría elegida",
+      "datos": "categoriaId omitido",
+      "esperado": "SPA no envía; API 400",
+      "obtenido": "SPA sin POST; API 400 con categoriaId obligatorio.",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-02_http.png",
+        "A-02_http_network.png",
+        "A-02_spa.png",
+        "A-02_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A02 sin categoría\",\"precio\":5.5,\"stock\":10,\"estado\":true}",
+          "status": 400,
+          "response": {
+            "timestamp": "2026-10-04T11:45:51.2854295",
+            "status": 400,
+            "error": "Bad Request",
+            "message": "Existen errores de validación",
+            "path": "/api/v1/productos",
+            "validationErrors": {
+              "categoriaId": "La categoría es obligatoria"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-03",
+      "operacion": "Alta con categoría inexistente",
+      "precondicion": "Categoría 999 inexistente",
+      "datos": "categoriaId=999",
+      "esperado": "404 Categoria no encontrada",
+      "obtenido": "HTTP 404: Categoria no encontrada con id: 999",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-03_http.png",
+        "A-03_http_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A03 inexistente\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":999}",
+          "status": 404,
+          "response": {
+            "timestamp": "2026-10-04T11:45:51.5949327",
+            "status": 404,
+            "error": "Not Found",
+            "message": "Categoria no encontrada con id: 999",
+            "path": "/api/v1/productos",
+            "validationErrors": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-04",
+      "operacion": "Alta en categoría inactiva",
+      "precondicion": "Categoría existente con estado=false",
+      "datos": "categoriaId=95",
+      "esperado": "SPA no ofrece; API rechaza con 409",
+      "obtenido": "SPA oculta: true; API 201 creó el producto.",
+      "estado": "Falla",
+      "evidencia": [
+        "A-04_http.png",
+        "A-04_http_network.png",
+        "A-04_spa.png",
+        "A-04_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A04 categoría inactiva\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":95}",
+          "status": 201,
+          "response": {
+            "id": 34,
+            "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 95,
+            "categoriaNombre": "Auto S8 343626 inactiva",
+            "fechaCreacion": "2026-10-04T11:45:52.8317193",
+            "fechaModificacion": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-05",
+      "operacion": "Alta con nombre duplicado",
+      "precondicion": "Existe el producto A-01",
+      "datos": "Mismo nombre en minúsculas",
+      "esperado": "409 Ya existe un producto",
+      "obtenido": "SPA muestra conflicto; POST 409.",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-05_spa.png",
+        "A-05_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"aa auto s8 343626 a01 válido\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":92}",
+          "status": 409,
+          "response": {
+            "timestamp": "2026-10-04T11:45:53.7402601",
+            "status": 409,
+            "error": "Conflict",
+            "message": "Ya existe un producto con el nombre: aa auto s8 343626 a01 válido",
+            "path": "/api/v1/productos",
+            "validationErrors": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-06",
+      "operacion": "Alta con precio y stock inválidos",
+      "precondicion": "Categoría activa",
+      "datos": "precio=0; stock=-1",
+      "esperado": "SPA bloquea; API 400 con precio y stock",
+      "obtenido": "SPA sin POST; API 400; validationErrors={\"precio\":\"El precio mínimo es 0.01\",\"stock\":\"El stock no puede ser negativo\"}",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-06_http.png",
+        "A-06_http_network.png",
+        "A-06_spa.png",
+        "A-06_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A06 inválido\",\"precio\":0,\"stock\":-1,\"estado\":true,\"categoriaId\":92}",
+          "status": 400,
+          "response": {
+            "timestamp": "2026-10-04T11:45:55.7333109",
+            "status": 400,
+            "error": "Bad Request",
+            "message": "Existen errores de validación",
+            "path": "/api/v1/productos",
+            "validationErrors": {
+              "precio": "El precio mínimo es 0.01",
+              "stock": "El stock no puede ser negativo"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C-01",
+      "operacion": "Cambio a categoría activa",
+      "precondicion": "Producto A-01 y segunda categoría activa",
+      "datos": "categoriaId=93",
+      "esperado": "200 y nueva categoría en listado",
+      "obtenido": "PUT 200; listado muestra Auto S8 343626 otra",
+      "estado": "Pasa",
+      "evidencia": [
+        "C-01_spa.png",
+        "C-01_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:4201/api/v1/productos/32",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A01 válido\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":93}",
+          "status": 200,
+          "response": {
+            "id": 32,
+            "nombre": "AA Auto S8 343626 A01 válido",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 93,
+            "categoriaNombre": "Auto S8 343626 otra",
+            "fechaCreacion": "2026-10-04T11:45:49.2407117",
+            "fechaModificacion": null
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/categorias",
+          "status": 200,
+          "response": [
+            {
+              "id": 81,
+              "nombre": "S8 Evidencia activa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.4962823",
+              "fechaModificacion": "2026-10-04T11:18:17.4962823"
+            },
+            {
+              "id": 82,
+              "nombre": "S8 Evidencia alternativa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.5676979",
+              "fechaModificacion": "2026-10-04T11:18:17.5676979"
+            },
+            {
+              "id": 83,
+              "nombre": "S8 Evidencia inactiva",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:18:17.5808047",
+              "fechaModificacion": "2026-10-04T11:18:17.5808047"
+            },
+            {
+              "id": 84,
+              "nombre": "Auto S8 956404 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4624873",
+              "fechaModificacion": "2026-10-04T11:39:16.4624873"
+            },
+            {
+              "id": 85,
+              "nombre": "Auto S8 956404 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.485331",
+              "fechaModificacion": "2026-10-04T11:39:16.485331"
+            },
+            {
+              "id": 86,
+              "nombre": "Auto S8 956404 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4971102",
+              "fechaModificacion": "2026-10-04T11:39:16.4971102"
+            },
+            {
+              "id": 87,
+              "nombre": "Auto S8 956404 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5100442",
+              "fechaModificacion": "2026-10-04T11:39:16.5100442"
+            },
+            {
+              "id": 88,
+              "nombre": "Auto S8 956404 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5212582",
+              "fechaModificacion": "2026-10-04T11:45:56.5900717"
+            },
+            {
+              "id": 89,
+              "nombre": "Auto S8 956404 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5322639",
+              "fechaModificacion": "2026-10-04T11:39:16.5322639"
+            },
+            {
+              "id": 90,
+              "nombre": "Auto S8 956404 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5439677",
+              "fechaModificacion": "2026-10-04T11:39:16.5439677"
+            },
+            {
+              "id": 91,
+              "nombre": "Auto S8 956404 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5558541",
+              "fechaModificacion": "2026-10-04T11:39:16.5558541"
+            },
+            {
+              "id": 92,
+              "nombre": "Auto S8 343626 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6787315",
+              "fechaModificacion": "2026-10-04T11:45:43.6787315"
+            },
+            {
+              "id": 93,
+              "nombre": "Auto S8 343626 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6966288",
+              "fechaModificacion": "2026-10-04T11:45:43.6966288"
+            },
+            {
+              "id": 94,
+              "nombre": "Auto S8 343626 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7085446",
+              "fechaModificacion": "2026-10-04T11:45:43.7085446"
+            },
+            {
+              "id": 95,
+              "nombre": "Auto S8 343626 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7203541",
+              "fechaModificacion": "2026-10-04T11:45:43.7203541"
+            },
+            {
+              "id": 96,
+              "nombre": "Auto S8 343626 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7311389",
+              "fechaModificacion": "2026-10-04T11:45:43.7311389"
+            },
+            {
+              "id": 97,
+              "nombre": "Auto S8 343626 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7428855",
+              "fechaModificacion": "2026-10-04T11:45:43.7428855"
+            },
+            {
+              "id": 98,
+              "nombre": "Auto S8 343626 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7557528",
+              "fechaModificacion": "2026-10-04T11:45:43.7557528"
+            },
+            {
+              "id": 99,
+              "nombre": "Auto S8 343626 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7677415",
+              "fechaModificacion": "2026-10-04T11:45:43.7677415"
+            },
+            {
+              "id": 25,
+              "nombre": "Analgésicos",
+              "descripcion": "Para el dolor",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:09:43.5749471",
+              "fechaModificacion": "2026-10-01T11:10:01.906835"
+            },
+            {
+              "id": 26,
+              "nombre": "Antiinflamatorios",
+              "descripcion": "Productos para el manejo de procesos inflamatorios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1089479",
+              "fechaModificacion": "2026-10-01T11:17:18.1089479"
+            },
+            {
+              "id": 27,
+              "nombre": "Antibióticos",
+              "descripcion": "Medicamentos antibacterianos sujetos a prescripción.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.129386",
+              "fechaModificacion": "2026-10-01T11:17:18.129386"
+            },
+            {
+              "id": 28,
+              "nombre": "Antialérgicos",
+              "descripcion": "Productos para el manejo de síntomas alérgicos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1439963",
+              "fechaModificacion": "2026-10-01T11:17:18.1439963"
+            },
+            {
+              "id": 29,
+              "nombre": "Antigripales",
+              "descripcion": "Productos para síntomas de resfriado y gripe.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.155431",
+              "fechaModificacion": "2026-10-01T11:17:18.155431"
+            },
+            {
+              "id": 30,
+              "nombre": "Antipiréticos",
+              "descripcion": "Medicamentos utilizados para el control de la fiebre.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1664724",
+              "fechaModificacion": "2026-10-01T11:17:18.1664724"
+            },
+            {
+              "id": 31,
+              "nombre": "Antihipertensivos",
+              "descripcion": "Medicamentos de prescripción para la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1794536",
+              "fechaModificacion": "2026-10-01T11:17:18.1794536"
+            },
+            {
+              "id": 32,
+              "nombre": "Antidiabéticos",
+              "descripcion": "Medicamentos de prescripción para el control de la diabetes.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1925318",
+              "fechaModificacion": "2026-10-01T11:17:18.1925318"
+            },
+            {
+              "id": 33,
+              "nombre": "Salud digestiva",
+              "descripcion": "Productos relacionados con el cuidado digestivo.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2058072",
+              "fechaModificacion": "2026-10-01T11:17:18.2058072"
+            },
+            {
+              "id": 34,
+              "nombre": "Vitaminas y minerales",
+              "descripcion": "Suplementos vitamínicos y minerales.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2182482",
+              "fechaModificacion": "2026-10-01T11:17:18.2182482"
+            },
+            {
+              "id": 35,
+              "nombre": "Cuidado respiratorio",
+              "descripcion": "Productos para el cuidado del sistema respiratorio.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2325131",
+              "fechaModificacion": "2026-10-01T11:17:18.2325131"
+            },
+            {
+              "id": 36,
+              "nombre": "Cuidado dermatológico",
+              "descripcion": "Productos para el cuidado de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2462819",
+              "fechaModificacion": "2026-10-01T11:17:18.2462819"
+            },
+            {
+              "id": 37,
+              "nombre": "Cuidado oftálmico",
+              "descripcion": "Productos para el cuidado de los ojos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2611217",
+              "fechaModificacion": "2026-10-01T11:17:18.2611217"
+            },
+            {
+              "id": 38,
+              "nombre": "Cuidado bucal",
+              "descripcion": "Productos para higiene y cuidado de la boca.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2744841",
+              "fechaModificacion": "2026-10-01T11:17:18.2744841"
+            },
+            {
+              "id": 39,
+              "nombre": "Higiene personal",
+              "descripcion": "Productos de higiene de uso cotidiano.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2883222",
+              "fechaModificacion": "2026-10-01T11:17:18.2883222"
+            },
+            {
+              "id": 40,
+              "nombre": "Primeros auxilios",
+              "descripcion": "Materiales e insumos para primeros auxilios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3032309",
+              "fechaModificacion": "2026-10-01T11:17:18.3032309"
+            },
+            {
+              "id": 41,
+              "nombre": "Material médico",
+              "descripcion": "Insumos y accesorios de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3193439",
+              "fechaModificacion": "2026-10-01T11:17:18.3193439"
+            },
+            {
+              "id": 42,
+              "nombre": "Cuidado infantil",
+              "descripcion": "Productos de cuidado e higiene infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3363997",
+              "fechaModificacion": "2026-10-01T11:17:18.3363997"
+            },
+            {
+              "id": 43,
+              "nombre": "Protección solar",
+              "descripcion": "Productos de protección frente a la radiación solar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3504557",
+              "fechaModificacion": "2026-10-01T11:17:18.3504557"
+            },
+            {
+              "id": 44,
+              "nombre": "Salud y bienestar",
+              "descripcion": "Productos complementarios de cuidado personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3633352",
+              "fechaModificacion": "2026-10-01T11:17:18.3633352"
+            },
+            {
+              "id": 45,
+              "nombre": "Antisépticos",
+              "descripcion": "Productos para antisepsia y limpieza.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6010498",
+              "fechaModificacion": "2026-10-01T11:18:03.6010498"
+            },
+            {
+              "id": 46,
+              "nombre": "Desinfectantes",
+              "descripcion": "Productos para desinfección de superficies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.618147",
+              "fechaModificacion": "2026-10-01T11:18:03.618147"
+            },
+            {
+              "id": 47,
+              "nombre": "Gasas y apósitos",
+              "descripcion": "Materiales para cobertura y cuidado de heridas.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6328737",
+              "fechaModificacion": "2026-10-01T11:18:03.6328737"
+            },
+            {
+              "id": 48,
+              "nombre": "Vendas y cintas médicas",
+              "descripcion": "Materiales para sujeción y protección.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6451615",
+              "fechaModificacion": "2026-10-01T11:18:03.6451615"
+            },
+            {
+              "id": 49,
+              "nombre": "Guantes de uso sanitario",
+              "descripcion": "Guantes y accesorios de protección sanitaria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6566967",
+              "fechaModificacion": "2026-10-01T11:18:03.6566967"
+            },
+            {
+              "id": 50,
+              "nombre": "Mascarillas",
+              "descripcion": "Mascarillas y protección respiratoria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6684134",
+              "fechaModificacion": "2026-10-01T11:18:03.6684134"
+            },
+            {
+              "id": 51,
+              "nombre": "Termómetros",
+              "descripcion": "Instrumentos para medir la temperatura corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6798918",
+              "fechaModificacion": "2026-10-01T11:18:03.6798918"
+            },
+            {
+              "id": 52,
+              "nombre": "Tensiómetros",
+              "descripcion": "Equipos para medir la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6907717",
+              "fechaModificacion": "2026-10-01T11:18:03.6907717"
+            },
+            {
+              "id": 53,
+              "nombre": "Glucómetros",
+              "descripcion": "Equipos y accesorios para medición de glucosa.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7015084",
+              "fechaModificacion": "2026-10-01T11:18:03.7015084"
+            },
+            {
+              "id": 54,
+              "nombre": "Nebulizadores",
+              "descripcion": "Equipos y accesorios de nebulización.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7140362",
+              "fechaModificacion": "2026-10-01T11:18:03.7140362"
+            },
+            {
+              "id": 55,
+              "nombre": "Jeringas y agujas",
+              "descripcion": "Insumos de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7263375",
+              "fechaModificacion": "2026-10-01T11:18:03.7263375"
+            },
+            {
+              "id": 56,
+              "nombre": "Soluciones salinas",
+              "descripcion": "Soluciones salinas según su presentación y uso.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.739422",
+              "fechaModificacion": "2026-10-01T11:18:03.739422"
+            },
+            {
+              "id": 57,
+              "nombre": "Cuidado del cabello",
+              "descripcion": "Productos de higiene y cuidado capilar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7518774",
+              "fechaModificacion": "2026-10-01T11:18:03.7518774"
+            },
+            {
+              "id": 58,
+              "nombre": "Champús",
+              "descripcion": "Productos para limpieza del cabello.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7647604",
+              "fechaModificacion": "2026-10-01T11:18:03.7647604"
+            },
+            {
+              "id": 59,
+              "nombre": "Jabones",
+              "descripcion": "Jabones de higiene personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7801517",
+              "fechaModificacion": "2026-10-01T11:18:03.7801517"
+            },
+            {
+              "id": 60,
+              "nombre": "Desodorantes",
+              "descripcion": "Productos de higiene y cuidado corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8051827",
+              "fechaModificacion": "2026-10-01T11:18:03.8051827"
+            },
+            {
+              "id": 61,
+              "nombre": "Cremas hidratantes",
+              "descripcion": "Productos para hidratación de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8190271",
+              "fechaModificacion": "2026-10-01T11:18:03.8190271"
+            },
+            {
+              "id": 62,
+              "nombre": "Cuidado de los labios",
+              "descripcion": "Bálsamos y productos de cuidado labial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8327306",
+              "fechaModificacion": "2026-10-01T11:18:03.8327306"
+            },
+            {
+              "id": 63,
+              "nombre": "Higiene íntima",
+              "descripcion": "Productos de higiene íntima.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8454155",
+              "fechaModificacion": "2026-10-01T11:18:03.8454155"
+            },
+            {
+              "id": 64,
+              "nombre": "Higiene femenina",
+              "descripcion": "Productos de cuidado e higiene femenina.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8571555",
+              "fechaModificacion": "2026-10-01T11:18:03.8571555"
+            },
+            {
+              "id": 65,
+              "nombre": "Pañales infantiles",
+              "descripcion": "Pañales para cuidado infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8690497",
+              "fechaModificacion": "2026-10-01T11:18:03.8690497"
+            },
+            {
+              "id": 66,
+              "nombre": "Pañales para adultos",
+              "descripcion": "Pañales para cuidado de adultos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8809374",
+              "fechaModificacion": "2026-10-01T11:18:03.8809374"
+            },
+            {
+              "id": 67,
+              "nombre": "Toallitas húmedas",
+              "descripcion": "Productos para limpieza e higiene.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8916771",
+              "fechaModificacion": "2026-10-01T11:18:03.8916771"
+            },
+            {
+              "id": 68,
+              "nombre": "Cuidado del bebé",
+              "descripcion": "Accesorios y productos de cuidado del bebé.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9031635",
+              "fechaModificacion": "2026-10-01T11:18:03.9031635"
+            },
+            {
+              "id": 69,
+              "nombre": "Accesorios de lactancia",
+              "descripcion": "Accesorios para lactancia y alimentación infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9159966",
+              "fechaModificacion": "2026-10-01T11:18:03.9159966"
+            },
+            {
+              "id": 70,
+              "nombre": "Cuidado de los pies",
+              "descripcion": "Productos de higiene y cuidado de los pies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9286536",
+              "fechaModificacion": "2026-10-01T11:18:03.9286536"
+            },
+            {
+              "id": 71,
+              "nombre": "Cuidado de las manos",
+              "descripcion": "Productos de limpieza e hidratación de manos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9410714",
+              "fechaModificacion": "2026-10-01T11:18:03.9410714"
+            },
+            {
+              "id": 72,
+              "nombre": "Higiene dental",
+              "descripcion": "Cepillos, pastas y accesorios de limpieza dental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9523069",
+              "fechaModificacion": "2026-10-01T11:18:03.9523069"
+            },
+            {
+              "id": 73,
+              "nombre": "Hilo dental",
+              "descripcion": "Productos para limpieza interdental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9623979",
+              "fechaModificacion": "2026-10-01T11:18:03.9623979"
+            },
+            {
+              "id": 74,
+              "nombre": "Enjuagues bucales",
+              "descripcion": "Productos complementarios de higiene bucal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9733472",
+              "fechaModificacion": "2026-10-01T11:18:03.9733472"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/productos?pagina=0&tamanio=10&ordenarPor=nombre&direccion=asc",
+          "status": 200,
+          "response": {
+            "contenido": [
+              {
+                "id": 32,
+                "nombre": "AA Auto S8 343626 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:49.2407117",
+                "fechaModificacion": "2026-10-04T11:45:56.6968845"
+              },
+              {
+                "id": 34,
+                "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 95,
+                "categoriaNombre": "Auto S8 343626 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:52.8317193",
+                "fechaModificacion": null
+              },
+              {
+                "id": 29,
+                "nombre": "AA Auto S8 343626 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:45:43.8516996",
+                "fechaModificacion": null
+              },
+              {
+                "id": 27,
+                "nombre": "AA Auto S8 343626 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 99,
+                "categoriaNombre": "Auto S8 343626 historial",
+                "fechaCreacion": "2026-10-04T11:45:43.8258119",
+                "fechaModificacion": null
+              },
+              {
+                "id": 26,
+                "nombre": "AA Auto S8 343626 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 94,
+                "categoriaNombre": "Auto S8 343626 tercera",
+                "fechaCreacion": "2026-10-04T11:45:43.8129366",
+                "fechaModificacion": null
+              },
+              {
+                "id": 24,
+                "nombre": "AA Auto S8 343626 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.7838122",
+                "fechaModificacion": null
+              },
+              {
+                "id": 25,
+                "nombre": "AA Auto S8 343626 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.7992839",
+                "fechaModificacion": null
+              },
+              {
+                "id": 31,
+                "nombre": "AA Auto S8 343626 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.8780049",
+                "fechaModificacion": null
+              },
+              {
+                "id": 30,
+                "nombre": "AA Auto S8 343626 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.865391",
+                "fechaModificacion": null
+              },
+              {
+                "id": 28,
+                "nombre": "AA Auto S8 343626 venta",
+                "precio": 9.5,
+                "stock": 14,
+                "estado": true,
+                "categoriaId": 96,
+                "categoriaNombre": "Auto S8 343626 ventas",
+                "fechaCreacion": "2026-10-04T11:45:43.8385711",
+                "fechaModificacion": null
+              }
+            ],
+            "pagina": 0,
+            "tamanio": 10,
+            "totalElementos": 33,
+            "totalPaginas": 4,
+            "ultima": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C-02",
+      "operacion": "Cambio a categoría inactiva",
+      "precondicion": "Producto existente; categoría inactiva",
+      "datos": "productoId=32; categoriaId=95",
+      "esperado": "SPA impide; API rechaza con 409",
+      "obtenido": "SPA bloquea: true; API 200 guardó categoría inactiva.",
+      "estado": "Falla",
+      "evidencia": [
+        "C-02_http.png",
+        "C-02_http_network.png",
+        "C-02_spa.png",
+        "C-02_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:4201/api/v1/productos/32",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A01 válido\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":95}",
+          "status": 200,
+          "response": {
+            "id": 32,
+            "nombre": "AA Auto S8 343626 A01 válido",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 95,
+            "categoriaNombre": "Auto S8 343626 inactiva",
+            "fechaCreacion": "2026-10-04T11:45:49.2407117",
+            "fechaModificacion": "2026-10-04T11:45:56.6968845"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C-03",
+      "operacion": "Desactivar categoría con productos activos",
+      "precondicion": "Categoría ventas tiene producto activo",
+      "datos": "categoriaId=96; estado=false",
+      "esperado": "409; impedir desactivación para preservar productos vendibles",
+      "obtenido": "SPA permitió; PUT 200 dejó producto activo en categoría inactiva.",
+      "estado": "Falla",
+      "evidencia": [
+        "C-03_spa.png",
+        "C-03_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:4201/api/v1/categorias/96",
+          "body": "{\"nombre\":\"Auto S8 343626 ventas\",\"descripcion\":\"Categoría exclusiva para pruebas autónomas S8.\",\"estado\":false}",
+          "status": 200,
+          "response": {
+            "id": 96,
+            "nombre": "Auto S8 343626 ventas",
+            "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+            "estado": false,
+            "fechaCreacion": "2026-10-04T11:45:43.7311389",
+            "fechaModificacion": "2026-10-04T11:45:59.2657958"
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/categorias",
+          "status": 200,
+          "response": [
+            {
+              "id": 81,
+              "nombre": "S8 Evidencia activa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.4962823",
+              "fechaModificacion": "2026-10-04T11:18:17.4962823"
+            },
+            {
+              "id": 82,
+              "nombre": "S8 Evidencia alternativa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.5676979",
+              "fechaModificacion": "2026-10-04T11:18:17.5676979"
+            },
+            {
+              "id": 83,
+              "nombre": "S8 Evidencia inactiva",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:18:17.5808047",
+              "fechaModificacion": "2026-10-04T11:18:17.5808047"
+            },
+            {
+              "id": 84,
+              "nombre": "Auto S8 956404 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4624873",
+              "fechaModificacion": "2026-10-04T11:39:16.4624873"
+            },
+            {
+              "id": 85,
+              "nombre": "Auto S8 956404 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.485331",
+              "fechaModificacion": "2026-10-04T11:39:16.485331"
+            },
+            {
+              "id": 86,
+              "nombre": "Auto S8 956404 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4971102",
+              "fechaModificacion": "2026-10-04T11:39:16.4971102"
+            },
+            {
+              "id": 87,
+              "nombre": "Auto S8 956404 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5100442",
+              "fechaModificacion": "2026-10-04T11:39:16.5100442"
+            },
+            {
+              "id": 88,
+              "nombre": "Auto S8 956404 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5212582",
+              "fechaModificacion": "2026-10-04T11:45:56.5900717"
+            },
+            {
+              "id": 89,
+              "nombre": "Auto S8 956404 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5322639",
+              "fechaModificacion": "2026-10-04T11:45:58.4791474"
+            },
+            {
+              "id": 90,
+              "nombre": "Auto S8 956404 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5439677",
+              "fechaModificacion": "2026-10-04T11:39:16.5439677"
+            },
+            {
+              "id": 91,
+              "nombre": "Auto S8 956404 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5558541",
+              "fechaModificacion": "2026-10-04T11:39:16.5558541"
+            },
+            {
+              "id": 92,
+              "nombre": "Auto S8 343626 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6787315",
+              "fechaModificacion": "2026-10-04T11:45:43.6787315"
+            },
+            {
+              "id": 93,
+              "nombre": "Auto S8 343626 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6966288",
+              "fechaModificacion": "2026-10-04T11:45:43.6966288"
+            },
+            {
+              "id": 94,
+              "nombre": "Auto S8 343626 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7085446",
+              "fechaModificacion": "2026-10-04T11:45:43.7085446"
+            },
+            {
+              "id": 95,
+              "nombre": "Auto S8 343626 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7203541",
+              "fechaModificacion": "2026-10-04T11:45:43.7203541"
+            },
+            {
+              "id": 96,
+              "nombre": "Auto S8 343626 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7311389",
+              "fechaModificacion": "2026-10-04T11:45:59.2657958"
+            },
+            {
+              "id": 97,
+              "nombre": "Auto S8 343626 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7428855",
+              "fechaModificacion": "2026-10-04T11:45:43.7428855"
+            },
+            {
+              "id": 98,
+              "nombre": "Auto S8 343626 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7557528",
+              "fechaModificacion": "2026-10-04T11:45:43.7557528"
+            },
+            {
+              "id": 99,
+              "nombre": "Auto S8 343626 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7677415",
+              "fechaModificacion": "2026-10-04T11:45:43.7677415"
+            },
+            {
+              "id": 25,
+              "nombre": "Analgésicos",
+              "descripcion": "Para el dolor",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:09:43.5749471",
+              "fechaModificacion": "2026-10-01T11:10:01.906835"
+            },
+            {
+              "id": 26,
+              "nombre": "Antiinflamatorios",
+              "descripcion": "Productos para el manejo de procesos inflamatorios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1089479",
+              "fechaModificacion": "2026-10-01T11:17:18.1089479"
+            },
+            {
+              "id": 27,
+              "nombre": "Antibióticos",
+              "descripcion": "Medicamentos antibacterianos sujetos a prescripción.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.129386",
+              "fechaModificacion": "2026-10-01T11:17:18.129386"
+            },
+            {
+              "id": 28,
+              "nombre": "Antialérgicos",
+              "descripcion": "Productos para el manejo de síntomas alérgicos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1439963",
+              "fechaModificacion": "2026-10-01T11:17:18.1439963"
+            },
+            {
+              "id": 29,
+              "nombre": "Antigripales",
+              "descripcion": "Productos para síntomas de resfriado y gripe.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.155431",
+              "fechaModificacion": "2026-10-01T11:17:18.155431"
+            },
+            {
+              "id": 30,
+              "nombre": "Antipiréticos",
+              "descripcion": "Medicamentos utilizados para el control de la fiebre.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1664724",
+              "fechaModificacion": "2026-10-01T11:17:18.1664724"
+            },
+            {
+              "id": 31,
+              "nombre": "Antihipertensivos",
+              "descripcion": "Medicamentos de prescripción para la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1794536",
+              "fechaModificacion": "2026-10-01T11:17:18.1794536"
+            },
+            {
+              "id": 32,
+              "nombre": "Antidiabéticos",
+              "descripcion": "Medicamentos de prescripción para el control de la diabetes.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1925318",
+              "fechaModificacion": "2026-10-01T11:17:18.1925318"
+            },
+            {
+              "id": 33,
+              "nombre": "Salud digestiva",
+              "descripcion": "Productos relacionados con el cuidado digestivo.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2058072",
+              "fechaModificacion": "2026-10-01T11:17:18.2058072"
+            },
+            {
+              "id": 34,
+              "nombre": "Vitaminas y minerales",
+              "descripcion": "Suplementos vitamínicos y minerales.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2182482",
+              "fechaModificacion": "2026-10-01T11:17:18.2182482"
+            },
+            {
+              "id": 35,
+              "nombre": "Cuidado respiratorio",
+              "descripcion": "Productos para el cuidado del sistema respiratorio.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2325131",
+              "fechaModificacion": "2026-10-01T11:17:18.2325131"
+            },
+            {
+              "id": 36,
+              "nombre": "Cuidado dermatológico",
+              "descripcion": "Productos para el cuidado de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2462819",
+              "fechaModificacion": "2026-10-01T11:17:18.2462819"
+            },
+            {
+              "id": 37,
+              "nombre": "Cuidado oftálmico",
+              "descripcion": "Productos para el cuidado de los ojos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2611217",
+              "fechaModificacion": "2026-10-01T11:17:18.2611217"
+            },
+            {
+              "id": 38,
+              "nombre": "Cuidado bucal",
+              "descripcion": "Productos para higiene y cuidado de la boca.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2744841",
+              "fechaModificacion": "2026-10-01T11:17:18.2744841"
+            },
+            {
+              "id": 39,
+              "nombre": "Higiene personal",
+              "descripcion": "Productos de higiene de uso cotidiano.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2883222",
+              "fechaModificacion": "2026-10-01T11:17:18.2883222"
+            },
+            {
+              "id": 40,
+              "nombre": "Primeros auxilios",
+              "descripcion": "Materiales e insumos para primeros auxilios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3032309",
+              "fechaModificacion": "2026-10-01T11:17:18.3032309"
+            },
+            {
+              "id": 41,
+              "nombre": "Material médico",
+              "descripcion": "Insumos y accesorios de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3193439",
+              "fechaModificacion": "2026-10-01T11:17:18.3193439"
+            },
+            {
+              "id": 42,
+              "nombre": "Cuidado infantil",
+              "descripcion": "Productos de cuidado e higiene infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3363997",
+              "fechaModificacion": "2026-10-01T11:17:18.3363997"
+            },
+            {
+              "id": 43,
+              "nombre": "Protección solar",
+              "descripcion": "Productos de protección frente a la radiación solar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3504557",
+              "fechaModificacion": "2026-10-01T11:17:18.3504557"
+            },
+            {
+              "id": 44,
+              "nombre": "Salud y bienestar",
+              "descripcion": "Productos complementarios de cuidado personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3633352",
+              "fechaModificacion": "2026-10-01T11:17:18.3633352"
+            },
+            {
+              "id": 45,
+              "nombre": "Antisépticos",
+              "descripcion": "Productos para antisepsia y limpieza.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6010498",
+              "fechaModificacion": "2026-10-01T11:18:03.6010498"
+            },
+            {
+              "id": 46,
+              "nombre": "Desinfectantes",
+              "descripcion": "Productos para desinfección de superficies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.618147",
+              "fechaModificacion": "2026-10-01T11:18:03.618147"
+            },
+            {
+              "id": 47,
+              "nombre": "Gasas y apósitos",
+              "descripcion": "Materiales para cobertura y cuidado de heridas.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6328737",
+              "fechaModificacion": "2026-10-01T11:18:03.6328737"
+            },
+            {
+              "id": 48,
+              "nombre": "Vendas y cintas médicas",
+              "descripcion": "Materiales para sujeción y protección.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6451615",
+              "fechaModificacion": "2026-10-01T11:18:03.6451615"
+            },
+            {
+              "id": 49,
+              "nombre": "Guantes de uso sanitario",
+              "descripcion": "Guantes y accesorios de protección sanitaria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6566967",
+              "fechaModificacion": "2026-10-01T11:18:03.6566967"
+            },
+            {
+              "id": 50,
+              "nombre": "Mascarillas",
+              "descripcion": "Mascarillas y protección respiratoria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6684134",
+              "fechaModificacion": "2026-10-01T11:18:03.6684134"
+            },
+            {
+              "id": 51,
+              "nombre": "Termómetros",
+              "descripcion": "Instrumentos para medir la temperatura corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6798918",
+              "fechaModificacion": "2026-10-01T11:18:03.6798918"
+            },
+            {
+              "id": 52,
+              "nombre": "Tensiómetros",
+              "descripcion": "Equipos para medir la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6907717",
+              "fechaModificacion": "2026-10-01T11:18:03.6907717"
+            },
+            {
+              "id": 53,
+              "nombre": "Glucómetros",
+              "descripcion": "Equipos y accesorios para medición de glucosa.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7015084",
+              "fechaModificacion": "2026-10-01T11:18:03.7015084"
+            },
+            {
+              "id": 54,
+              "nombre": "Nebulizadores",
+              "descripcion": "Equipos y accesorios de nebulización.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7140362",
+              "fechaModificacion": "2026-10-01T11:18:03.7140362"
+            },
+            {
+              "id": 55,
+              "nombre": "Jeringas y agujas",
+              "descripcion": "Insumos de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7263375",
+              "fechaModificacion": "2026-10-01T11:18:03.7263375"
+            },
+            {
+              "id": 56,
+              "nombre": "Soluciones salinas",
+              "descripcion": "Soluciones salinas según su presentación y uso.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.739422",
+              "fechaModificacion": "2026-10-01T11:18:03.739422"
+            },
+            {
+              "id": 57,
+              "nombre": "Cuidado del cabello",
+              "descripcion": "Productos de higiene y cuidado capilar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7518774",
+              "fechaModificacion": "2026-10-01T11:18:03.7518774"
+            },
+            {
+              "id": 58,
+              "nombre": "Champús",
+              "descripcion": "Productos para limpieza del cabello.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7647604",
+              "fechaModificacion": "2026-10-01T11:18:03.7647604"
+            },
+            {
+              "id": 59,
+              "nombre": "Jabones",
+              "descripcion": "Jabones de higiene personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7801517",
+              "fechaModificacion": "2026-10-01T11:18:03.7801517"
+            },
+            {
+              "id": 60,
+              "nombre": "Desodorantes",
+              "descripcion": "Productos de higiene y cuidado corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8051827",
+              "fechaModificacion": "2026-10-01T11:18:03.8051827"
+            },
+            {
+              "id": 61,
+              "nombre": "Cremas hidratantes",
+              "descripcion": "Productos para hidratación de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8190271",
+              "fechaModificacion": "2026-10-01T11:18:03.8190271"
+            },
+            {
+              "id": 62,
+              "nombre": "Cuidado de los labios",
+              "descripcion": "Bálsamos y productos de cuidado labial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8327306",
+              "fechaModificacion": "2026-10-01T11:18:03.8327306"
+            },
+            {
+              "id": 63,
+              "nombre": "Higiene íntima",
+              "descripcion": "Productos de higiene íntima.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8454155",
+              "fechaModificacion": "2026-10-01T11:18:03.8454155"
+            },
+            {
+              "id": 64,
+              "nombre": "Higiene femenina",
+              "descripcion": "Productos de cuidado e higiene femenina.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8571555",
+              "fechaModificacion": "2026-10-01T11:18:03.8571555"
+            },
+            {
+              "id": 65,
+              "nombre": "Pañales infantiles",
+              "descripcion": "Pañales para cuidado infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8690497",
+              "fechaModificacion": "2026-10-01T11:18:03.8690497"
+            },
+            {
+              "id": 66,
+              "nombre": "Pañales para adultos",
+              "descripcion": "Pañales para cuidado de adultos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8809374",
+              "fechaModificacion": "2026-10-01T11:18:03.8809374"
+            },
+            {
+              "id": 67,
+              "nombre": "Toallitas húmedas",
+              "descripcion": "Productos para limpieza e higiene.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8916771",
+              "fechaModificacion": "2026-10-01T11:18:03.8916771"
+            },
+            {
+              "id": 68,
+              "nombre": "Cuidado del bebé",
+              "descripcion": "Accesorios y productos de cuidado del bebé.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9031635",
+              "fechaModificacion": "2026-10-01T11:18:03.9031635"
+            },
+            {
+              "id": 69,
+              "nombre": "Accesorios de lactancia",
+              "descripcion": "Accesorios para lactancia y alimentación infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9159966",
+              "fechaModificacion": "2026-10-01T11:18:03.9159966"
+            },
+            {
+              "id": 70,
+              "nombre": "Cuidado de los pies",
+              "descripcion": "Productos de higiene y cuidado de los pies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9286536",
+              "fechaModificacion": "2026-10-01T11:18:03.9286536"
+            },
+            {
+              "id": 71,
+              "nombre": "Cuidado de las manos",
+              "descripcion": "Productos de limpieza e hidratación de manos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9410714",
+              "fechaModificacion": "2026-10-01T11:18:03.9410714"
+            },
+            {
+              "id": 72,
+              "nombre": "Higiene dental",
+              "descripcion": "Cepillos, pastas y accesorios de limpieza dental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9523069",
+              "fechaModificacion": "2026-10-01T11:18:03.9523069"
+            },
+            {
+              "id": 73,
+              "nombre": "Hilo dental",
+              "descripcion": "Productos para limpieza interdental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9623979",
+              "fechaModificacion": "2026-10-01T11:18:03.9623979"
+            },
+            {
+              "id": 74,
+              "nombre": "Enjuagues bucales",
+              "descripcion": "Productos complementarios de higiene bucal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9733472",
+              "fechaModificacion": "2026-10-01T11:18:03.9733472"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C-04",
+      "operacion": "Alta con categoría desactivada en otra pestaña",
+      "precondicion": "Pestaña 1 cargó categoría X activa; pestaña 2 la desactivó",
+      "datos": "categoriaId=97; producto nuevo",
+      "esperado": "API revalida y rechaza; no crea producto en categoría inactiva",
+      "obtenido": "Pestaña 2 desactivó; pestaña 1 envió y POST 201 creó el producto.",
+      "estado": "Falla",
+      "evidencia": [
+        "C-04_pestana1.png",
+        "C-04_pestana2.png",
+        "C-04_spa.png",
+        "C-04_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 C04 dos pestañas\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":97}",
+          "status": 201,
+          "response": {
+            "id": 36,
+            "nombre": "AA Auto S8 343626 C04 dos pestañas",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 97,
+            "categoriaNombre": "Auto S8 343626 carrera",
+            "fechaCreacion": "2026-10-04T11:46:01.6820326",
+            "fechaModificacion": null
+          }
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/categorias",
+          "status": 200,
+          "response": [
+            {
+              "id": 81,
+              "nombre": "S8 Evidencia activa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.4962823",
+              "fechaModificacion": "2026-10-04T11:18:17.4962823"
+            },
+            {
+              "id": 82,
+              "nombre": "S8 Evidencia alternativa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.5676979",
+              "fechaModificacion": "2026-10-04T11:18:17.5676979"
+            },
+            {
+              "id": 83,
+              "nombre": "S8 Evidencia inactiva",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:18:17.5808047",
+              "fechaModificacion": "2026-10-04T11:18:17.5808047"
+            },
+            {
+              "id": 84,
+              "nombre": "Auto S8 956404 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4624873",
+              "fechaModificacion": "2026-10-04T11:39:16.4624873"
+            },
+            {
+              "id": 85,
+              "nombre": "Auto S8 956404 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.485331",
+              "fechaModificacion": "2026-10-04T11:39:16.485331"
+            },
+            {
+              "id": 86,
+              "nombre": "Auto S8 956404 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4971102",
+              "fechaModificacion": "2026-10-04T11:39:16.4971102"
+            },
+            {
+              "id": 87,
+              "nombre": "Auto S8 956404 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5100442",
+              "fechaModificacion": "2026-10-04T11:39:16.5100442"
+            },
+            {
+              "id": 88,
+              "nombre": "Auto S8 956404 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5212582",
+              "fechaModificacion": "2026-10-04T11:45:56.5900717"
+            },
+            {
+              "id": 89,
+              "nombre": "Auto S8 956404 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5322639",
+              "fechaModificacion": "2026-10-04T11:45:58.4791474"
+            },
+            {
+              "id": 90,
+              "nombre": "Auto S8 956404 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5439677",
+              "fechaModificacion": "2026-10-04T11:39:16.5439677"
+            },
+            {
+              "id": 91,
+              "nombre": "Auto S8 956404 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5558541",
+              "fechaModificacion": "2026-10-04T11:39:16.5558541"
+            },
+            {
+              "id": 92,
+              "nombre": "Auto S8 343626 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6787315",
+              "fechaModificacion": "2026-10-04T11:45:43.6787315"
+            },
+            {
+              "id": 93,
+              "nombre": "Auto S8 343626 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6966288",
+              "fechaModificacion": "2026-10-04T11:45:43.6966288"
+            },
+            {
+              "id": 94,
+              "nombre": "Auto S8 343626 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7085446",
+              "fechaModificacion": "2026-10-04T11:45:43.7085446"
+            },
+            {
+              "id": 95,
+              "nombre": "Auto S8 343626 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7203541",
+              "fechaModificacion": "2026-10-04T11:45:43.7203541"
+            },
+            {
+              "id": 96,
+              "nombre": "Auto S8 343626 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7311389",
+              "fechaModificacion": "2026-10-04T11:45:59.2657958"
+            },
+            {
+              "id": 97,
+              "nombre": "Auto S8 343626 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7428855",
+              "fechaModificacion": "2026-10-04T11:46:01.0920529"
+            },
+            {
+              "id": 98,
+              "nombre": "Auto S8 343626 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7557528",
+              "fechaModificacion": "2026-10-04T11:45:43.7557528"
+            },
+            {
+              "id": 99,
+              "nombre": "Auto S8 343626 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7677415",
+              "fechaModificacion": "2026-10-04T11:45:43.7677415"
+            },
+            {
+              "id": 25,
+              "nombre": "Analgésicos",
+              "descripcion": "Para el dolor",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:09:43.5749471",
+              "fechaModificacion": "2026-10-01T11:10:01.906835"
+            },
+            {
+              "id": 26,
+              "nombre": "Antiinflamatorios",
+              "descripcion": "Productos para el manejo de procesos inflamatorios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1089479",
+              "fechaModificacion": "2026-10-01T11:17:18.1089479"
+            },
+            {
+              "id": 27,
+              "nombre": "Antibióticos",
+              "descripcion": "Medicamentos antibacterianos sujetos a prescripción.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.129386",
+              "fechaModificacion": "2026-10-01T11:17:18.129386"
+            },
+            {
+              "id": 28,
+              "nombre": "Antialérgicos",
+              "descripcion": "Productos para el manejo de síntomas alérgicos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1439963",
+              "fechaModificacion": "2026-10-01T11:17:18.1439963"
+            },
+            {
+              "id": 29,
+              "nombre": "Antigripales",
+              "descripcion": "Productos para síntomas de resfriado y gripe.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.155431",
+              "fechaModificacion": "2026-10-01T11:17:18.155431"
+            },
+            {
+              "id": 30,
+              "nombre": "Antipiréticos",
+              "descripcion": "Medicamentos utilizados para el control de la fiebre.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1664724",
+              "fechaModificacion": "2026-10-01T11:17:18.1664724"
+            },
+            {
+              "id": 31,
+              "nombre": "Antihipertensivos",
+              "descripcion": "Medicamentos de prescripción para la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1794536",
+              "fechaModificacion": "2026-10-01T11:17:18.1794536"
+            },
+            {
+              "id": 32,
+              "nombre": "Antidiabéticos",
+              "descripcion": "Medicamentos de prescripción para el control de la diabetes.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1925318",
+              "fechaModificacion": "2026-10-01T11:17:18.1925318"
+            },
+            {
+              "id": 33,
+              "nombre": "Salud digestiva",
+              "descripcion": "Productos relacionados con el cuidado digestivo.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2058072",
+              "fechaModificacion": "2026-10-01T11:17:18.2058072"
+            },
+            {
+              "id": 34,
+              "nombre": "Vitaminas y minerales",
+              "descripcion": "Suplementos vitamínicos y minerales.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2182482",
+              "fechaModificacion": "2026-10-01T11:17:18.2182482"
+            },
+            {
+              "id": 35,
+              "nombre": "Cuidado respiratorio",
+              "descripcion": "Productos para el cuidado del sistema respiratorio.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2325131",
+              "fechaModificacion": "2026-10-01T11:17:18.2325131"
+            },
+            {
+              "id": 36,
+              "nombre": "Cuidado dermatológico",
+              "descripcion": "Productos para el cuidado de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2462819",
+              "fechaModificacion": "2026-10-01T11:17:18.2462819"
+            },
+            {
+              "id": 37,
+              "nombre": "Cuidado oftálmico",
+              "descripcion": "Productos para el cuidado de los ojos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2611217",
+              "fechaModificacion": "2026-10-01T11:17:18.2611217"
+            },
+            {
+              "id": 38,
+              "nombre": "Cuidado bucal",
+              "descripcion": "Productos para higiene y cuidado de la boca.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2744841",
+              "fechaModificacion": "2026-10-01T11:17:18.2744841"
+            },
+            {
+              "id": 39,
+              "nombre": "Higiene personal",
+              "descripcion": "Productos de higiene de uso cotidiano.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2883222",
+              "fechaModificacion": "2026-10-01T11:17:18.2883222"
+            },
+            {
+              "id": 40,
+              "nombre": "Primeros auxilios",
+              "descripcion": "Materiales e insumos para primeros auxilios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3032309",
+              "fechaModificacion": "2026-10-01T11:17:18.3032309"
+            },
+            {
+              "id": 41,
+              "nombre": "Material médico",
+              "descripcion": "Insumos y accesorios de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3193439",
+              "fechaModificacion": "2026-10-01T11:17:18.3193439"
+            },
+            {
+              "id": 42,
+              "nombre": "Cuidado infantil",
+              "descripcion": "Productos de cuidado e higiene infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3363997",
+              "fechaModificacion": "2026-10-01T11:17:18.3363997"
+            },
+            {
+              "id": 43,
+              "nombre": "Protección solar",
+              "descripcion": "Productos de protección frente a la radiación solar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3504557",
+              "fechaModificacion": "2026-10-01T11:17:18.3504557"
+            },
+            {
+              "id": 44,
+              "nombre": "Salud y bienestar",
+              "descripcion": "Productos complementarios de cuidado personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3633352",
+              "fechaModificacion": "2026-10-01T11:17:18.3633352"
+            },
+            {
+              "id": 45,
+              "nombre": "Antisépticos",
+              "descripcion": "Productos para antisepsia y limpieza.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6010498",
+              "fechaModificacion": "2026-10-01T11:18:03.6010498"
+            },
+            {
+              "id": 46,
+              "nombre": "Desinfectantes",
+              "descripcion": "Productos para desinfección de superficies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.618147",
+              "fechaModificacion": "2026-10-01T11:18:03.618147"
+            },
+            {
+              "id": 47,
+              "nombre": "Gasas y apósitos",
+              "descripcion": "Materiales para cobertura y cuidado de heridas.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6328737",
+              "fechaModificacion": "2026-10-01T11:18:03.6328737"
+            },
+            {
+              "id": 48,
+              "nombre": "Vendas y cintas médicas",
+              "descripcion": "Materiales para sujeción y protección.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6451615",
+              "fechaModificacion": "2026-10-01T11:18:03.6451615"
+            },
+            {
+              "id": 49,
+              "nombre": "Guantes de uso sanitario",
+              "descripcion": "Guantes y accesorios de protección sanitaria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6566967",
+              "fechaModificacion": "2026-10-01T11:18:03.6566967"
+            },
+            {
+              "id": 50,
+              "nombre": "Mascarillas",
+              "descripcion": "Mascarillas y protección respiratoria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6684134",
+              "fechaModificacion": "2026-10-01T11:18:03.6684134"
+            },
+            {
+              "id": 51,
+              "nombre": "Termómetros",
+              "descripcion": "Instrumentos para medir la temperatura corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6798918",
+              "fechaModificacion": "2026-10-01T11:18:03.6798918"
+            },
+            {
+              "id": 52,
+              "nombre": "Tensiómetros",
+              "descripcion": "Equipos para medir la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6907717",
+              "fechaModificacion": "2026-10-01T11:18:03.6907717"
+            },
+            {
+              "id": 53,
+              "nombre": "Glucómetros",
+              "descripcion": "Equipos y accesorios para medición de glucosa.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7015084",
+              "fechaModificacion": "2026-10-01T11:18:03.7015084"
+            },
+            {
+              "id": 54,
+              "nombre": "Nebulizadores",
+              "descripcion": "Equipos y accesorios de nebulización.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7140362",
+              "fechaModificacion": "2026-10-01T11:18:03.7140362"
+            },
+            {
+              "id": 55,
+              "nombre": "Jeringas y agujas",
+              "descripcion": "Insumos de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7263375",
+              "fechaModificacion": "2026-10-01T11:18:03.7263375"
+            },
+            {
+              "id": 56,
+              "nombre": "Soluciones salinas",
+              "descripcion": "Soluciones salinas según su presentación y uso.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.739422",
+              "fechaModificacion": "2026-10-01T11:18:03.739422"
+            },
+            {
+              "id": 57,
+              "nombre": "Cuidado del cabello",
+              "descripcion": "Productos de higiene y cuidado capilar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7518774",
+              "fechaModificacion": "2026-10-01T11:18:03.7518774"
+            },
+            {
+              "id": 58,
+              "nombre": "Champús",
+              "descripcion": "Productos para limpieza del cabello.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7647604",
+              "fechaModificacion": "2026-10-01T11:18:03.7647604"
+            },
+            {
+              "id": 59,
+              "nombre": "Jabones",
+              "descripcion": "Jabones de higiene personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7801517",
+              "fechaModificacion": "2026-10-01T11:18:03.7801517"
+            },
+            {
+              "id": 60,
+              "nombre": "Desodorantes",
+              "descripcion": "Productos de higiene y cuidado corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8051827",
+              "fechaModificacion": "2026-10-01T11:18:03.8051827"
+            },
+            {
+              "id": 61,
+              "nombre": "Cremas hidratantes",
+              "descripcion": "Productos para hidratación de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8190271",
+              "fechaModificacion": "2026-10-01T11:18:03.8190271"
+            },
+            {
+              "id": 62,
+              "nombre": "Cuidado de los labios",
+              "descripcion": "Bálsamos y productos de cuidado labial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8327306",
+              "fechaModificacion": "2026-10-01T11:18:03.8327306"
+            },
+            {
+              "id": 63,
+              "nombre": "Higiene íntima",
+              "descripcion": "Productos de higiene íntima.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8454155",
+              "fechaModificacion": "2026-10-01T11:18:03.8454155"
+            },
+            {
+              "id": 64,
+              "nombre": "Higiene femenina",
+              "descripcion": "Productos de cuidado e higiene femenina.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8571555",
+              "fechaModificacion": "2026-10-01T11:18:03.8571555"
+            },
+            {
+              "id": 65,
+              "nombre": "Pañales infantiles",
+              "descripcion": "Pañales para cuidado infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8690497",
+              "fechaModificacion": "2026-10-01T11:18:03.8690497"
+            },
+            {
+              "id": 66,
+              "nombre": "Pañales para adultos",
+              "descripcion": "Pañales para cuidado de adultos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8809374",
+              "fechaModificacion": "2026-10-01T11:18:03.8809374"
+            },
+            {
+              "id": 67,
+              "nombre": "Toallitas húmedas",
+              "descripcion": "Productos para limpieza e higiene.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8916771",
+              "fechaModificacion": "2026-10-01T11:18:03.8916771"
+            },
+            {
+              "id": 68,
+              "nombre": "Cuidado del bebé",
+              "descripcion": "Accesorios y productos de cuidado del bebé.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9031635",
+              "fechaModificacion": "2026-10-01T11:18:03.9031635"
+            },
+            {
+              "id": 69,
+              "nombre": "Accesorios de lactancia",
+              "descripcion": "Accesorios para lactancia y alimentación infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9159966",
+              "fechaModificacion": "2026-10-01T11:18:03.9159966"
+            },
+            {
+              "id": 70,
+              "nombre": "Cuidado de los pies",
+              "descripcion": "Productos de higiene y cuidado de los pies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9286536",
+              "fechaModificacion": "2026-10-01T11:18:03.9286536"
+            },
+            {
+              "id": 71,
+              "nombre": "Cuidado de las manos",
+              "descripcion": "Productos de limpieza e hidratación de manos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9410714",
+              "fechaModificacion": "2026-10-01T11:18:03.9410714"
+            },
+            {
+              "id": 72,
+              "nombre": "Higiene dental",
+              "descripcion": "Cepillos, pastas y accesorios de limpieza dental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9523069",
+              "fechaModificacion": "2026-10-01T11:18:03.9523069"
+            },
+            {
+              "id": 73,
+              "nombre": "Hilo dental",
+              "descripcion": "Productos para limpieza interdental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9623979",
+              "fechaModificacion": "2026-10-01T11:18:03.9623979"
+            },
+            {
+              "id": 74,
+              "nombre": "Enjuagues bucales",
+              "descripcion": "Productos complementarios de higiene bucal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9733472",
+              "fechaModificacion": "2026-10-01T11:18:03.9733472"
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/productos?pagina=0&tamanio=10&ordenarPor=nombre&direccion=asc",
+          "status": 200,
+          "response": {
+            "contenido": [
+              {
+                "id": 32,
+                "nombre": "AA Auto S8 343626 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 95,
+                "categoriaNombre": "Auto S8 343626 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:49.2407117",
+                "fechaModificacion": "2026-10-04T11:45:58.4398911"
+              },
+              {
+                "id": 34,
+                "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 95,
+                "categoriaNombre": "Auto S8 343626 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:52.8317193",
+                "fechaModificacion": null
+              },
+              {
+                "id": 29,
+                "nombre": "AA Auto S8 343626 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:45:43.8516996",
+                "fechaModificacion": null
+              },
+              {
+                "id": 36,
+                "nombre": "AA Auto S8 343626 C04 dos pestañas",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:46:01.6820326",
+                "fechaModificacion": null
+              },
+              {
+                "id": 27,
+                "nombre": "AA Auto S8 343626 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 99,
+                "categoriaNombre": "Auto S8 343626 historial",
+                "fechaCreacion": "2026-10-04T11:45:43.8258119",
+                "fechaModificacion": null
+              },
+              {
+                "id": 26,
+                "nombre": "AA Auto S8 343626 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 94,
+                "categoriaNombre": "Auto S8 343626 tercera",
+                "fechaCreacion": "2026-10-04T11:45:43.8129366",
+                "fechaModificacion": null
+              },
+              {
+                "id": 24,
+                "nombre": "AA Auto S8 343626 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.7838122",
+                "fechaModificacion": null
+              },
+              {
+                "id": 25,
+                "nombre": "AA Auto S8 343626 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.7992839",
+                "fechaModificacion": null
+              },
+              {
+                "id": 31,
+                "nombre": "AA Auto S8 343626 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.8780049",
+                "fechaModificacion": null
+              },
+              {
+                "id": 30,
+                "nombre": "AA Auto S8 343626 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.865391",
+                "fechaModificacion": null
+              }
+            ],
+            "pagina": 0,
+            "tamanio": 10,
+            "totalElementos": 35,
+            "totalPaginas": 4,
+            "ultima": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "B-01",
+      "operacion": "Baja lógica de producto activo",
+      "precondicion": "Producto A-01 activo",
+      "datos": "productoId=32",
+      "esperado": "204; permanece como Inactivo",
+      "obtenido": "DELETE 204, GET y fila Inactivo con botón deshabilitado.",
+      "estado": "Pasa",
+      "evidencia": [
+        "B-01_spa.png",
+        "B-01_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:4201/api/v1/productos/32",
+          "status": 204,
+          "response": null
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/productos?pagina=0&tamanio=10&ordenarPor=nombre&direccion=asc",
+          "status": 200,
+          "response": {
+            "contenido": [
+              {
+                "id": 32,
+                "nombre": "AA Auto S8 343626 A01 válido",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": false,
+                "categoriaId": 95,
+                "categoriaNombre": "Auto S8 343626 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:49.2407117",
+                "fechaModificacion": "2026-10-04T11:46:02.8902628"
+              },
+              {
+                "id": 34,
+                "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 95,
+                "categoriaNombre": "Auto S8 343626 inactiva",
+                "fechaCreacion": "2026-10-04T11:45:52.8317193",
+                "fechaModificacion": null
+              },
+              {
+                "id": 29,
+                "nombre": "AA Auto S8 343626 carrera",
+                "precio": 10.5,
+                "stock": 15,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:45:43.8516996",
+                "fechaModificacion": null
+              },
+              {
+                "id": 36,
+                "nombre": "AA Auto S8 343626 C04 dos pestañas",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 97,
+                "categoriaNombre": "Auto S8 343626 carrera",
+                "fechaCreacion": "2026-10-04T11:46:01.6820326",
+                "fechaModificacion": null
+              },
+              {
+                "id": 27,
+                "nombre": "AA Auto S8 343626 historico",
+                "precio": 8.5,
+                "stock": 13,
+                "estado": false,
+                "categoriaId": 99,
+                "categoriaNombre": "Auto S8 343626 historial",
+                "fechaCreacion": "2026-10-04T11:45:43.8258119",
+                "fechaModificacion": null
+              },
+              {
+                "id": 26,
+                "nombre": "AA Auto S8 343626 otro",
+                "precio": 7.5,
+                "stock": 12,
+                "estado": true,
+                "categoriaId": 94,
+                "categoriaNombre": "Auto S8 343626 tercera",
+                "fechaCreacion": "2026-10-04T11:45:43.8129366",
+                "fechaModificacion": null
+              },
+              {
+                "id": 24,
+                "nombre": "AA Auto S8 343626 principal",
+                "precio": 5.5,
+                "stock": 10,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.7838122",
+                "fechaModificacion": null
+              },
+              {
+                "id": 25,
+                "nombre": "AA Auto S8 343626 secundario",
+                "precio": 6.5,
+                "stock": 11,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.7992839",
+                "fechaModificacion": null
+              },
+              {
+                "id": 31,
+                "nombre": "AA Auto S8 343626 septimo",
+                "precio": 12.5,
+                "stock": 17,
+                "estado": true,
+                "categoriaId": 93,
+                "categoriaNombre": "Auto S8 343626 otra",
+                "fechaCreacion": "2026-10-04T11:45:43.8780049",
+                "fechaModificacion": null
+              },
+              {
+                "id": 30,
+                "nombre": "AA Auto S8 343626 sexto",
+                "precio": 11.5,
+                "stock": 16,
+                "estado": true,
+                "categoriaId": 92,
+                "categoriaNombre": "Auto S8 343626 activa",
+                "fechaCreacion": "2026-10-04T11:45:43.865391",
+                "fechaModificacion": null
+              }
+            ],
+            "pagina": 0,
+            "tamanio": 10,
+            "totalElementos": 35,
+            "totalPaginas": 4,
+            "ultima": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "B-02",
+      "operacion": "Baja repetida",
+      "precondicion": "Producto A-01 ya inactivo",
+      "datos": "productoId=32",
+      "esperado": "409 producto ya inactivo",
+      "obtenido": "HTTP 409: El producto ya está inactivo.",
+      "estado": "Pasa",
+      "evidencia": [
+        "B-02_http.png",
+        "B-02_http_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:4201/api/v1/productos/32",
+          "status": 409,
+          "response": {
+            "timestamp": "2026-10-04T11:46:03.6095972",
+            "status": 409,
+            "error": "Conflict",
+            "message": "El producto ya está inactivo.",
+            "path": "/api/v1/productos/32",
+            "validationErrors": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "B-03",
+      "operacion": "Eliminar categoría sin productos",
+      "precondicion": "Categoría temporal sin productos",
+      "datos": "categoriaId=98",
+      "esperado": "204; desaparece del listado y select",
+      "obtenido": "DELETE 204; categoría ausente en nuevo formulario.",
+      "estado": "Pasa",
+      "evidencia": [
+        "B-03_select.png",
+        "B-03_spa.png",
+        "B-03_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:4201/api/v1/categorias/98",
+          "status": 204
+        },
+        {
+          "method": "GET",
+          "url": "http://localhost:4201/api/v1/categorias",
+          "status": 200,
+          "response": [
+            {
+              "id": 81,
+              "nombre": "S8 Evidencia activa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.4962823",
+              "fechaModificacion": "2026-10-04T11:18:17.4962823"
+            },
+            {
+              "id": 82,
+              "nombre": "S8 Evidencia alternativa",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:18:17.5676979",
+              "fechaModificacion": "2026-10-04T11:18:17.5676979"
+            },
+            {
+              "id": 83,
+              "nombre": "S8 Evidencia inactiva",
+              "descripcion": "Datos de prueba de sesión 8; creados para evidencias.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:18:17.5808047",
+              "fechaModificacion": "2026-10-04T11:18:17.5808047"
+            },
+            {
+              "id": 84,
+              "nombre": "Auto S8 956404 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4624873",
+              "fechaModificacion": "2026-10-04T11:39:16.4624873"
+            },
+            {
+              "id": 85,
+              "nombre": "Auto S8 956404 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.485331",
+              "fechaModificacion": "2026-10-04T11:39:16.485331"
+            },
+            {
+              "id": 86,
+              "nombre": "Auto S8 956404 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.4971102",
+              "fechaModificacion": "2026-10-04T11:39:16.4971102"
+            },
+            {
+              "id": 87,
+              "nombre": "Auto S8 956404 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5100442",
+              "fechaModificacion": "2026-10-04T11:39:16.5100442"
+            },
+            {
+              "id": 88,
+              "nombre": "Auto S8 956404 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5212582",
+              "fechaModificacion": "2026-10-04T11:45:56.5900717"
+            },
+            {
+              "id": 89,
+              "nombre": "Auto S8 956404 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:39:16.5322639",
+              "fechaModificacion": "2026-10-04T11:45:58.4791474"
+            },
+            {
+              "id": 90,
+              "nombre": "Auto S8 956404 temporal",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5439677",
+              "fechaModificacion": "2026-10-04T11:39:16.5439677"
+            },
+            {
+              "id": 91,
+              "nombre": "Auto S8 956404 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:39:16.5558541",
+              "fechaModificacion": "2026-10-04T11:39:16.5558541"
+            },
+            {
+              "id": 92,
+              "nombre": "Auto S8 343626 activa",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6787315",
+              "fechaModificacion": "2026-10-04T11:45:43.6787315"
+            },
+            {
+              "id": 93,
+              "nombre": "Auto S8 343626 otra",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.6966288",
+              "fechaModificacion": "2026-10-04T11:45:43.6966288"
+            },
+            {
+              "id": 94,
+              "nombre": "Auto S8 343626 tercera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7085446",
+              "fechaModificacion": "2026-10-04T11:45:43.7085446"
+            },
+            {
+              "id": 95,
+              "nombre": "Auto S8 343626 inactiva",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7203541",
+              "fechaModificacion": "2026-10-04T11:45:43.7203541"
+            },
+            {
+              "id": 96,
+              "nombre": "Auto S8 343626 ventas",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7311389",
+              "fechaModificacion": "2026-10-04T11:45:59.2657958"
+            },
+            {
+              "id": 97,
+              "nombre": "Auto S8 343626 carrera",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": false,
+              "fechaCreacion": "2026-10-04T11:45:43.7428855",
+              "fechaModificacion": "2026-10-04T11:46:01.0920529"
+            },
+            {
+              "id": 99,
+              "nombre": "Auto S8 343626 historial",
+              "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+              "estado": true,
+              "fechaCreacion": "2026-10-04T11:45:43.7677415",
+              "fechaModificacion": "2026-10-04T11:45:43.7677415"
+            },
+            {
+              "id": 25,
+              "nombre": "Analgésicos",
+              "descripcion": "Para el dolor",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:09:43.5749471",
+              "fechaModificacion": "2026-10-01T11:10:01.906835"
+            },
+            {
+              "id": 26,
+              "nombre": "Antiinflamatorios",
+              "descripcion": "Productos para el manejo de procesos inflamatorios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1089479",
+              "fechaModificacion": "2026-10-01T11:17:18.1089479"
+            },
+            {
+              "id": 27,
+              "nombre": "Antibióticos",
+              "descripcion": "Medicamentos antibacterianos sujetos a prescripción.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.129386",
+              "fechaModificacion": "2026-10-01T11:17:18.129386"
+            },
+            {
+              "id": 28,
+              "nombre": "Antialérgicos",
+              "descripcion": "Productos para el manejo de síntomas alérgicos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1439963",
+              "fechaModificacion": "2026-10-01T11:17:18.1439963"
+            },
+            {
+              "id": 29,
+              "nombre": "Antigripales",
+              "descripcion": "Productos para síntomas de resfriado y gripe.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.155431",
+              "fechaModificacion": "2026-10-01T11:17:18.155431"
+            },
+            {
+              "id": 30,
+              "nombre": "Antipiréticos",
+              "descripcion": "Medicamentos utilizados para el control de la fiebre.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1664724",
+              "fechaModificacion": "2026-10-01T11:17:18.1664724"
+            },
+            {
+              "id": 31,
+              "nombre": "Antihipertensivos",
+              "descripcion": "Medicamentos de prescripción para la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1794536",
+              "fechaModificacion": "2026-10-01T11:17:18.1794536"
+            },
+            {
+              "id": 32,
+              "nombre": "Antidiabéticos",
+              "descripcion": "Medicamentos de prescripción para el control de la diabetes.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.1925318",
+              "fechaModificacion": "2026-10-01T11:17:18.1925318"
+            },
+            {
+              "id": 33,
+              "nombre": "Salud digestiva",
+              "descripcion": "Productos relacionados con el cuidado digestivo.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2058072",
+              "fechaModificacion": "2026-10-01T11:17:18.2058072"
+            },
+            {
+              "id": 34,
+              "nombre": "Vitaminas y minerales",
+              "descripcion": "Suplementos vitamínicos y minerales.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2182482",
+              "fechaModificacion": "2026-10-01T11:17:18.2182482"
+            },
+            {
+              "id": 35,
+              "nombre": "Cuidado respiratorio",
+              "descripcion": "Productos para el cuidado del sistema respiratorio.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2325131",
+              "fechaModificacion": "2026-10-01T11:17:18.2325131"
+            },
+            {
+              "id": 36,
+              "nombre": "Cuidado dermatológico",
+              "descripcion": "Productos para el cuidado de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2462819",
+              "fechaModificacion": "2026-10-01T11:17:18.2462819"
+            },
+            {
+              "id": 37,
+              "nombre": "Cuidado oftálmico",
+              "descripcion": "Productos para el cuidado de los ojos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2611217",
+              "fechaModificacion": "2026-10-01T11:17:18.2611217"
+            },
+            {
+              "id": 38,
+              "nombre": "Cuidado bucal",
+              "descripcion": "Productos para higiene y cuidado de la boca.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2744841",
+              "fechaModificacion": "2026-10-01T11:17:18.2744841"
+            },
+            {
+              "id": 39,
+              "nombre": "Higiene personal",
+              "descripcion": "Productos de higiene de uso cotidiano.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.2883222",
+              "fechaModificacion": "2026-10-01T11:17:18.2883222"
+            },
+            {
+              "id": 40,
+              "nombre": "Primeros auxilios",
+              "descripcion": "Materiales e insumos para primeros auxilios.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3032309",
+              "fechaModificacion": "2026-10-01T11:17:18.3032309"
+            },
+            {
+              "id": 41,
+              "nombre": "Material médico",
+              "descripcion": "Insumos y accesorios de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3193439",
+              "fechaModificacion": "2026-10-01T11:17:18.3193439"
+            },
+            {
+              "id": 42,
+              "nombre": "Cuidado infantil",
+              "descripcion": "Productos de cuidado e higiene infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3363997",
+              "fechaModificacion": "2026-10-01T11:17:18.3363997"
+            },
+            {
+              "id": 43,
+              "nombre": "Protección solar",
+              "descripcion": "Productos de protección frente a la radiación solar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3504557",
+              "fechaModificacion": "2026-10-01T11:17:18.3504557"
+            },
+            {
+              "id": 44,
+              "nombre": "Salud y bienestar",
+              "descripcion": "Productos complementarios de cuidado personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:17:18.3633352",
+              "fechaModificacion": "2026-10-01T11:17:18.3633352"
+            },
+            {
+              "id": 45,
+              "nombre": "Antisépticos",
+              "descripcion": "Productos para antisepsia y limpieza.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6010498",
+              "fechaModificacion": "2026-10-01T11:18:03.6010498"
+            },
+            {
+              "id": 46,
+              "nombre": "Desinfectantes",
+              "descripcion": "Productos para desinfección de superficies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.618147",
+              "fechaModificacion": "2026-10-01T11:18:03.618147"
+            },
+            {
+              "id": 47,
+              "nombre": "Gasas y apósitos",
+              "descripcion": "Materiales para cobertura y cuidado de heridas.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6328737",
+              "fechaModificacion": "2026-10-01T11:18:03.6328737"
+            },
+            {
+              "id": 48,
+              "nombre": "Vendas y cintas médicas",
+              "descripcion": "Materiales para sujeción y protección.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6451615",
+              "fechaModificacion": "2026-10-01T11:18:03.6451615"
+            },
+            {
+              "id": 49,
+              "nombre": "Guantes de uso sanitario",
+              "descripcion": "Guantes y accesorios de protección sanitaria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6566967",
+              "fechaModificacion": "2026-10-01T11:18:03.6566967"
+            },
+            {
+              "id": 50,
+              "nombre": "Mascarillas",
+              "descripcion": "Mascarillas y protección respiratoria.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6684134",
+              "fechaModificacion": "2026-10-01T11:18:03.6684134"
+            },
+            {
+              "id": 51,
+              "nombre": "Termómetros",
+              "descripcion": "Instrumentos para medir la temperatura corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6798918",
+              "fechaModificacion": "2026-10-01T11:18:03.6798918"
+            },
+            {
+              "id": 52,
+              "nombre": "Tensiómetros",
+              "descripcion": "Equipos para medir la presión arterial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.6907717",
+              "fechaModificacion": "2026-10-01T11:18:03.6907717"
+            },
+            {
+              "id": 53,
+              "nombre": "Glucómetros",
+              "descripcion": "Equipos y accesorios para medición de glucosa.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7015084",
+              "fechaModificacion": "2026-10-01T11:18:03.7015084"
+            },
+            {
+              "id": 54,
+              "nombre": "Nebulizadores",
+              "descripcion": "Equipos y accesorios de nebulización.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7140362",
+              "fechaModificacion": "2026-10-01T11:18:03.7140362"
+            },
+            {
+              "id": 55,
+              "nombre": "Jeringas y agujas",
+              "descripcion": "Insumos de uso sanitario.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7263375",
+              "fechaModificacion": "2026-10-01T11:18:03.7263375"
+            },
+            {
+              "id": 56,
+              "nombre": "Soluciones salinas",
+              "descripcion": "Soluciones salinas según su presentación y uso.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.739422",
+              "fechaModificacion": "2026-10-01T11:18:03.739422"
+            },
+            {
+              "id": 57,
+              "nombre": "Cuidado del cabello",
+              "descripcion": "Productos de higiene y cuidado capilar.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7518774",
+              "fechaModificacion": "2026-10-01T11:18:03.7518774"
+            },
+            {
+              "id": 58,
+              "nombre": "Champús",
+              "descripcion": "Productos para limpieza del cabello.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7647604",
+              "fechaModificacion": "2026-10-01T11:18:03.7647604"
+            },
+            {
+              "id": 59,
+              "nombre": "Jabones",
+              "descripcion": "Jabones de higiene personal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.7801517",
+              "fechaModificacion": "2026-10-01T11:18:03.7801517"
+            },
+            {
+              "id": 60,
+              "nombre": "Desodorantes",
+              "descripcion": "Productos de higiene y cuidado corporal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8051827",
+              "fechaModificacion": "2026-10-01T11:18:03.8051827"
+            },
+            {
+              "id": 61,
+              "nombre": "Cremas hidratantes",
+              "descripcion": "Productos para hidratación de la piel.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8190271",
+              "fechaModificacion": "2026-10-01T11:18:03.8190271"
+            },
+            {
+              "id": 62,
+              "nombre": "Cuidado de los labios",
+              "descripcion": "Bálsamos y productos de cuidado labial.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8327306",
+              "fechaModificacion": "2026-10-01T11:18:03.8327306"
+            },
+            {
+              "id": 63,
+              "nombre": "Higiene íntima",
+              "descripcion": "Productos de higiene íntima.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8454155",
+              "fechaModificacion": "2026-10-01T11:18:03.8454155"
+            },
+            {
+              "id": 64,
+              "nombre": "Higiene femenina",
+              "descripcion": "Productos de cuidado e higiene femenina.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8571555",
+              "fechaModificacion": "2026-10-01T11:18:03.8571555"
+            },
+            {
+              "id": 65,
+              "nombre": "Pañales infantiles",
+              "descripcion": "Pañales para cuidado infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8690497",
+              "fechaModificacion": "2026-10-01T11:18:03.8690497"
+            },
+            {
+              "id": 66,
+              "nombre": "Pañales para adultos",
+              "descripcion": "Pañales para cuidado de adultos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8809374",
+              "fechaModificacion": "2026-10-01T11:18:03.8809374"
+            },
+            {
+              "id": 67,
+              "nombre": "Toallitas húmedas",
+              "descripcion": "Productos para limpieza e higiene.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.8916771",
+              "fechaModificacion": "2026-10-01T11:18:03.8916771"
+            },
+            {
+              "id": 68,
+              "nombre": "Cuidado del bebé",
+              "descripcion": "Accesorios y productos de cuidado del bebé.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9031635",
+              "fechaModificacion": "2026-10-01T11:18:03.9031635"
+            },
+            {
+              "id": 69,
+              "nombre": "Accesorios de lactancia",
+              "descripcion": "Accesorios para lactancia y alimentación infantil.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9159966",
+              "fechaModificacion": "2026-10-01T11:18:03.9159966"
+            },
+            {
+              "id": 70,
+              "nombre": "Cuidado de los pies",
+              "descripcion": "Productos de higiene y cuidado de los pies.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9286536",
+              "fechaModificacion": "2026-10-01T11:18:03.9286536"
+            },
+            {
+              "id": 71,
+              "nombre": "Cuidado de las manos",
+              "descripcion": "Productos de limpieza e hidratación de manos.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9410714",
+              "fechaModificacion": "2026-10-01T11:18:03.9410714"
+            },
+            {
+              "id": 72,
+              "nombre": "Higiene dental",
+              "descripcion": "Cepillos, pastas y accesorios de limpieza dental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9523069",
+              "fechaModificacion": "2026-10-01T11:18:03.9523069"
+            },
+            {
+              "id": 73,
+              "nombre": "Hilo dental",
+              "descripcion": "Productos para limpieza interdental.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9623979",
+              "fechaModificacion": "2026-10-01T11:18:03.9623979"
+            },
+            {
+              "id": 74,
+              "nombre": "Enjuagues bucales",
+              "descripcion": "Productos complementarios de higiene bucal.",
+              "estado": true,
+              "fechaCreacion": "2026-10-01T11:18:03.9733472",
+              "fechaModificacion": "2026-10-01T11:18:03.9733472"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B-04",
+      "operacion": "Eliminar categoría con productos dados de baja",
+      "precondicion": "Solo un producto inactivo en categoría historial",
+      "datos": "categoriaId=99",
+      "esperado": "409; preservar categoría para trazabilidad de reportes",
+      "obtenido": "DELETE 409; no elimina categoría.",
+      "estado": "Pasa",
+      "evidencia": [
+        "B-04_spa.png",
+        "B-04_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:4201/api/v1/categorias/99",
+          "status": 409,
+          "response": {
+            "timestamp": "2026-10-04T11:46:07.0535718",
+            "status": 409,
+            "error": "Conflict",
+            "message": "No se puede eliminar una categoría que tiene productos asociados.",
+            "path": "/api/v1/categorias/99",
+            "validationErrors": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-07",
+      "operacion": "Alta en límites válidos",
+      "precondicion": "Categoría activa",
+      "datos": "precio=0.01; stock=0",
+      "esperado": "201; ambos límites son válidos",
+      "obtenido": "HTTP 201; precio y stock conservados.",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-07_http.png",
+        "A-07_http_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A07 límites\",\"precio\":0.01,\"stock\":0,\"estado\":true,\"categoriaId\":94}",
+          "status": 201,
+          "response": {
+            "id": 37,
+            "nombre": "AA Auto S8 343626 A07 límites",
+            "precio": 0.01,
+            "stock": 0,
+            "estado": true,
+            "categoriaId": 94,
+            "categoriaNombre": "Auto S8 343626 tercera",
+            "fechaCreacion": "2026-10-04T11:46:07.7533062",
+            "fechaModificacion": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "A-08",
+      "operacion": "Alta con ID de categoría negativo",
+      "precondicion": "Petición directa",
+      "datos": "categoriaId=-1",
+      "esperado": "400 validationErrors.categoriaId",
+      "obtenido": "HTTP 400; {\"categoriaId\":\"La categoría debe tener un identificador positivo\"}",
+      "estado": "Pasa",
+      "evidencia": [
+        "A-08_http.png",
+        "A-08_http_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "POST",
+          "url": "http://localhost:4201/api/v1/productos",
+          "body": "{\"nombre\":\"AA Auto S8 343626 A08 id negativo\",\"precio\":5.5,\"stock\":10,\"estado\":true,\"categoriaId\":-1}",
+          "status": 400,
+          "response": {
+            "timestamp": "2026-10-04T11:46:08.0269868",
+            "status": 400,
+            "error": "Bad Request",
+            "message": "Existen errores de validación",
+            "path": "/api/v1/productos",
+            "validationErrors": {
+              "categoriaId": "La categoría debe tener un identificador positivo"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "C-05",
+      "operacion": "Cambio a categoría inexistente",
+      "precondicion": "Producto existente y categoría 999 inexistente",
+      "datos": "categoriaId=999",
+      "esperado": "404; conservar asociación anterior",
+      "obtenido": "HTTP 404: Categoria no encontrada con id: 999",
+      "estado": "Pasa",
+      "evidencia": [
+        "C-05_http.png",
+        "C-05_http_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "PUT",
+          "url": "http://localhost:4201/api/v1/productos/25",
+          "body": "{\"nombre\":\"AA Auto S8 343626 secundario\",\"precio\":6.5,\"stock\":11,\"estado\":true,\"categoriaId\":999}",
+          "status": 404,
+          "response": {
+            "timestamp": "2026-10-04T11:46:08.3148371",
+            "status": 404,
+            "error": "Not Found",
+            "message": "Categoria no encontrada con id: 999",
+            "path": "/api/v1/productos/25",
+            "validationErrors": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "B-05",
+      "operacion": "Eliminar categoría con productos activos",
+      "precondicion": "Categoría otra conserva producto secundario activo",
+      "datos": "categoriaId=93",
+      "esperado": "409; impedir pérdida de relación",
+      "obtenido": "DELETE 409; mensaje de productos asociados.",
+      "estado": "Pasa",
+      "evidencia": [
+        "B-05_spa.png",
+        "B-05_spa_network.png"
+      ],
+      "peticiones": [
+        {
+          "method": "DELETE",
+          "url": "http://localhost:4201/api/v1/categorias/93",
+          "status": 409,
+          "response": {
+            "timestamp": "2026-10-04T11:46:09.423556",
+            "status": 409,
+            "error": "Conflict",
+            "message": "No se puede eliminar una categoría que tiene productos asociados.",
+            "path": "/api/v1/categorias/93",
+            "validationErrors": null
+          }
+        }
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "caso": "PRE",
+      "path": "/productos?tamanio=100",
+      "method": "GET",
+      "status": 200,
+      "response": {
+        "contenido": [
+          {
+            "id": 32,
+            "nombre": "AA Auto S8 343626 A01 válido",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 92,
+            "categoriaNombre": "Auto S8 343626 activa",
+            "fechaCreacion": "2026-10-04T11:45:49.2407117",
+            "fechaModificacion": null
+          },
+          {
+            "id": 29,
+            "nombre": "AA Auto S8 343626 carrera",
+            "precio": 10.5,
+            "stock": 15,
+            "estado": true,
+            "categoriaId": 97,
+            "categoriaNombre": "Auto S8 343626 carrera",
+            "fechaCreacion": "2026-10-04T11:45:43.8516996",
+            "fechaModificacion": null
+          },
+          {
+            "id": 27,
+            "nombre": "AA Auto S8 343626 historico",
+            "precio": 8.5,
+            "stock": 13,
+            "estado": false,
+            "categoriaId": 99,
+            "categoriaNombre": "Auto S8 343626 historial",
+            "fechaCreacion": "2026-10-04T11:45:43.8258119",
+            "fechaModificacion": null
+          },
+          {
+            "id": 26,
+            "nombre": "AA Auto S8 343626 otro",
+            "precio": 7.5,
+            "stock": 12,
+            "estado": true,
+            "categoriaId": 94,
+            "categoriaNombre": "Auto S8 343626 tercera",
+            "fechaCreacion": "2026-10-04T11:45:43.8129366",
+            "fechaModificacion": null
+          },
+          {
+            "id": 24,
+            "nombre": "AA Auto S8 343626 principal",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 92,
+            "categoriaNombre": "Auto S8 343626 activa",
+            "fechaCreacion": "2026-10-04T11:45:43.7838122",
+            "fechaModificacion": null
+          },
+          {
+            "id": 25,
+            "nombre": "AA Auto S8 343626 secundario",
+            "precio": 6.5,
+            "stock": 11,
+            "estado": true,
+            "categoriaId": 93,
+            "categoriaNombre": "Auto S8 343626 otra",
+            "fechaCreacion": "2026-10-04T11:45:43.7992839",
+            "fechaModificacion": null
+          },
+          {
+            "id": 31,
+            "nombre": "AA Auto S8 343626 septimo",
+            "precio": 12.5,
+            "stock": 17,
+            "estado": true,
+            "categoriaId": 93,
+            "categoriaNombre": "Auto S8 343626 otra",
+            "fechaCreacion": "2026-10-04T11:45:43.8780049",
+            "fechaModificacion": null
+          },
+          {
+            "id": 30,
+            "nombre": "AA Auto S8 343626 sexto",
+            "precio": 11.5,
+            "stock": 16,
+            "estado": true,
+            "categoriaId": 92,
+            "categoriaNombre": "Auto S8 343626 activa",
+            "fechaCreacion": "2026-10-04T11:45:43.865391",
+            "fechaModificacion": null
+          },
+          {
+            "id": 28,
+            "nombre": "AA Auto S8 343626 venta",
+            "precio": 9.5,
+            "stock": 14,
+            "estado": true,
+            "categoriaId": 96,
+            "categoriaNombre": "Auto S8 343626 ventas",
+            "fechaCreacion": "2026-10-04T11:45:43.8385711",
+            "fechaModificacion": null
+          },
+          {
+            "id": 23,
+            "nombre": "AA Auto S8 956404 A01 válido",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 84,
+            "categoriaNombre": "Auto S8 956404 activa",
+            "fechaCreacion": "2026-10-04T11:44:07.7251401",
+            "fechaModificacion": null
+          },
+          {
+            "id": 33,
+            "nombre": "AA Auto S8 956404 A04 categoría inactiva",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 87,
+            "categoriaNombre": "Auto S8 956404 inactiva",
+            "fechaCreacion": "2026-10-04T11:45:49.8728104",
+            "fechaModificacion": null
+          },
+          {
+            "id": 20,
+            "nombre": "AA Auto S8 956404 carrera",
+            "precio": 10.5,
+            "stock": 15,
+            "estado": true,
+            "categoriaId": 89,
+            "categoriaNombre": "Auto S8 956404 carrera",
+            "fechaCreacion": "2026-10-04T11:39:16.631525",
+            "fechaModificacion": null
+          },
+          {
+            "id": 18,
+            "nombre": "AA Auto S8 956404 historico",
+            "precio": 8.5,
+            "stock": 13,
+            "estado": false,
+            "categoriaId": 91,
+            "categoriaNombre": "Auto S8 956404 historial",
+            "fechaCreacion": "2026-10-04T11:39:16.6081062",
+            "fechaModificacion": null
+          },
+          {
+            "id": 17,
+            "nombre": "AA Auto S8 956404 otro",
+            "precio": 7.5,
+            "stock": 12,
+            "estado": true,
+            "categoriaId": 86,
+            "categoriaNombre": "Auto S8 956404 tercera",
+            "fechaCreacion": "2026-10-04T11:39:16.5957768",
+            "fechaModificacion": null
+          },
+          {
+            "id": 15,
+            "nombre": "AA Auto S8 956404 principal",
+            "precio": 5.5,
+            "stock": 10,
+            "estado": true,
+            "categoriaId": 84,
+            "categoriaNombre": "Auto S8 956404 activa",
+            "fechaCreacion": "2026-10-04T11:39:16.5689006",
+            "fechaModificacion": null
+          },
+          {
+            "id": 16,
+            "nombre": "AA Auto S8 956404 secundario",
+            "precio": 6.5,
+            "stock": 11,
+            "estado": true,
+            "categoriaId": 85,
+            "categoriaNombre": "Auto S8 956404 otra",
+            "fechaCreacion": "2026-10-04T11:39:16.5818545",
+            "fechaModificacion": null
+          },
+          {
+            "id": 22,
+            "nombre": "AA Auto S8 956404 septimo",
+            "precio": 12.5,
+            "stock": 17,
+            "estado": true,
+            "categoriaId": 85,
+            "categoriaNombre": "Auto S8 956404 otra",
+            "fechaCreacion": "2026-10-04T11:39:16.6566272",
+            "fechaModificacion": null
+          },
+          {
+            "id": 21,
+            "nombre": "AA Auto S8 956404 sexto",
+            "precio": 11.5,
+            "stock": 16,
+            "estado": true,
+            "categoriaId": 84,
+            "categoriaNombre": "Auto S8 956404 activa",
+            "fechaCreacion": "2026-10-04T11:39:16.6432891",
+            "fechaModificacion": null
+          },
+          {
+            "id": 19,
+            "nombre": "AA Auto S8 956404 venta",
+            "precio": 9.5,
+            "stock": 14,
+            "estado": true,
+            "categoriaId": 88,
+            "categoriaNombre": "Auto S8 956404 ventas",
+            "fechaCreacion": "2026-10-04T11:39:16.620717",
+            "fechaModificacion": null
+          },
+          {
+            "id": 14,
+            "nombre": "AAA S8 00 Registro evidencia",
+            "precio": 18.5,
+            "stock": 25,
+            "estado": false,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:22:29.4526228",
+            "fechaModificacion": "2026-10-04T11:22:35.2122205"
+          },
+          {
+            "id": 2,
+            "nombre": "AAA S8 01 Producto de prueba",
+            "precio": 1.5,
+            "stock": 3,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.4473352",
+            "fechaModificacion": "2026-10-04T11:22:33.6885561"
+          },
+          {
+            "id": 3,
+            "nombre": "AAA S8 02 Producto de prueba",
+            "precio": 2.5,
+            "stock": 6,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.4715894",
+            "fechaModificacion": null
+          },
+          {
+            "id": 4,
+            "nombre": "AAA S8 03 Producto de prueba",
+            "precio": 3.5,
+            "stock": 9,
+            "estado": true,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:35.4852743",
+            "fechaModificacion": null
+          },
+          {
+            "id": 5,
+            "nombre": "AAA S8 04 Producto de prueba",
+            "precio": 4.5,
+            "stock": 12,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.4997101",
+            "fechaModificacion": null
+          },
+          {
+            "id": 6,
+            "nombre": "AAA S8 05 Producto de prueba",
+            "precio": 5.5,
+            "stock": 15,
+            "estado": true,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:35.5131102",
+            "fechaModificacion": null
+          },
+          {
+            "id": 7,
+            "nombre": "AAA S8 06 Producto de prueba",
+            "precio": 6.5,
+            "stock": 18,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.5258264",
+            "fechaModificacion": null
+          },
+          {
+            "id": 8,
+            "nombre": "AAA S8 07 Producto de prueba",
+            "precio": 7.5,
+            "stock": 21,
+            "estado": true,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:35.5387533",
+            "fechaModificacion": null
+          },
+          {
+            "id": 9,
+            "nombre": "AAA S8 08 Producto de prueba",
+            "precio": 8.5,
+            "stock": 24,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.5516193",
+            "fechaModificacion": null
+          },
+          {
+            "id": 10,
+            "nombre": "AAA S8 09 Producto de prueba",
+            "precio": 9.5,
+            "stock": 27,
+            "estado": true,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:35.5629141",
+            "fechaModificacion": null
+          },
+          {
+            "id": 11,
+            "nombre": "AAA S8 10 Producto de prueba",
+            "precio": 10.5,
+            "stock": 30,
+            "estado": true,
+            "categoriaId": 82,
+            "categoriaNombre": "S8 Evidencia alternativa",
+            "fechaCreacion": "2026-10-04T11:20:35.5756059",
+            "fechaModificacion": null
+          },
+          {
+            "id": 12,
+            "nombre": "AAA S8 11 Producto de prueba",
+            "precio": 11.5,
+            "stock": 33,
+            "estado": true,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:35.5890607",
+            "fechaModificacion": null
+          },
+          {
+            "id": 13,
+            "nombre": "ZZZ S8 Registro anterior evidencia",
+            "precio": 18.5,
+            "stock": 25,
+            "estado": false,
+            "categoriaId": 81,
+            "categoriaNombre": "S8 Evidencia activa",
+            "fechaCreacion": "2026-10-04T11:20:44.9449072",
+            "fechaModificacion": "2026-10-04T11:22:20.3141298"
+          }
+        ],
+        "pagina": 0,
+        "tamanio": 100,
+        "totalElementos": 32,
+        "totalPaginas": 1,
+        "ultima": true
+      }
+    },
+    {
+      "caso": "A-02",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A02 sin categoría",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true
+      },
+      "status": 400,
+      "response": {
+        "timestamp": "2026-10-04T11:45:51.2854295",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Existen errores de validación",
+        "path": "/api/v1/productos",
+        "validationErrors": {
+          "categoriaId": "La categoría es obligatoria"
+        }
+      }
+    },
+    {
+      "caso": "A-03",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A03 inexistente",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 999
+      },
+      "status": 404,
+      "response": {
+        "timestamp": "2026-10-04T11:45:51.5949327",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Categoria no encontrada con id: 999",
+        "path": "/api/v1/productos",
+        "validationErrors": null
+      }
+    },
+    {
+      "caso": "A-04",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 95
+      },
+      "status": 201,
+      "response": {
+        "id": 34,
+        "nombre": "AA Auto S8 343626 A04 categoría inactiva",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 95,
+        "categoriaNombre": "Auto S8 343626 inactiva",
+        "fechaCreacion": "2026-10-04T11:45:52.8317193",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "caso": "A-06",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A06 inválido",
+        "precio": 0,
+        "stock": -1,
+        "estado": true,
+        "categoriaId": 92
+      },
+      "status": 400,
+      "response": {
+        "timestamp": "2026-10-04T11:45:55.7333109",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Existen errores de validación",
+        "path": "/api/v1/productos",
+        "validationErrors": {
+          "precio": "El precio mínimo es 0.01",
+          "stock": "El stock no puede ser negativo"
+        }
+      }
+    },
+    {
+      "caso": "C-02",
+      "path": "/productos/32",
+      "method": "PUT",
+      "body": {
+        "nombre": "AA Auto S8 343626 A01 válido",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 95
+      },
+      "status": 200,
+      "response": {
+        "id": 32,
+        "nombre": "AA Auto S8 343626 A01 válido",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 95,
+        "categoriaNombre": "Auto S8 343626 inactiva",
+        "fechaCreacion": "2026-10-04T11:45:49.2407117",
+        "fechaModificacion": "2026-10-04T11:45:56.6968845"
+      }
+    },
+    {
+      "caso": "B-02",
+      "path": "/productos/32",
+      "method": "DELETE",
+      "status": 409,
+      "response": {
+        "timestamp": "2026-10-04T11:46:03.6095972",
+        "status": 409,
+        "error": "Conflict",
+        "message": "El producto ya está inactivo.",
+        "path": "/api/v1/productos/32",
+        "validationErrors": null
+      }
+    },
+    {
+      "caso": "A-07",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A07 límites",
+        "precio": 0.01,
+        "stock": 0,
+        "estado": true,
+        "categoriaId": 94
+      },
+      "status": 201,
+      "response": {
+        "id": 37,
+        "nombre": "AA Auto S8 343626 A07 límites",
+        "precio": 0.01,
+        "stock": 0,
+        "estado": true,
+        "categoriaId": 94,
+        "categoriaNombre": "Auto S8 343626 tercera",
+        "fechaCreacion": "2026-10-04T11:46:07.7533062",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "caso": "A-08",
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 A08 id negativo",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": -1
+      },
+      "status": 400,
+      "response": {
+        "timestamp": "2026-10-04T11:46:08.0269868",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Existen errores de validación",
+        "path": "/api/v1/productos",
+        "validationErrors": {
+          "categoriaId": "La categoría debe tener un identificador positivo"
+        }
+      }
+    },
+    {
+      "caso": "C-05",
+      "path": "/productos/25",
+      "method": "PUT",
+      "body": {
+        "nombre": "AA Auto S8 343626 secundario",
+        "precio": 6.5,
+        "stock": 11,
+        "estado": true,
+        "categoriaId": 999
+      },
+      "status": 404,
+      "response": {
+        "timestamp": "2026-10-04T11:46:08.3148371",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Categoria no encontrada con id: 999",
+        "path": "/api/v1/productos/25",
+        "validationErrors": null
+      }
+    }
+  ],
+  "preparacion": [
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 activa",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 92,
+        "nombre": "Auto S8 343626 activa",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.6787315",
+        "fechaModificacion": "2026-10-04T11:45:43.6787315"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 otra",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 93,
+        "nombre": "Auto S8 343626 otra",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.6966288",
+        "fechaModificacion": "2026-10-04T11:45:43.6966288"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 tercera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 94,
+        "nombre": "Auto S8 343626 tercera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7085446",
+        "fechaModificacion": "2026-10-04T11:45:43.7085446"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 inactiva",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": false
+      },
+      "status": 201,
+      "response": {
+        "id": 95,
+        "nombre": "Auto S8 343626 inactiva",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": false,
+        "fechaCreacion": "2026-10-04T11:45:43.7203541",
+        "fechaModificacion": "2026-10-04T11:45:43.7203541"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 ventas",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 96,
+        "nombre": "Auto S8 343626 ventas",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7311389",
+        "fechaModificacion": "2026-10-04T11:45:43.7311389"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 carrera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 97,
+        "nombre": "Auto S8 343626 carrera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7428855",
+        "fechaModificacion": "2026-10-04T11:45:43.7428855"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 temporal",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 98,
+        "nombre": "Auto S8 343626 temporal",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7557528",
+        "fechaModificacion": "2026-10-04T11:45:43.7557528"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 historial",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 99,
+        "nombre": "Auto S8 343626 historial",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7677415",
+        "fechaModificacion": "2026-10-04T11:45:43.7677415"
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 principal",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 92
+      },
+      "status": 201,
+      "response": {
+        "id": 24,
+        "nombre": "AA Auto S8 343626 principal",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 92,
+        "categoriaNombre": "Auto S8 343626 activa",
+        "fechaCreacion": "2026-10-04T11:45:43.7838122",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 secundario",
+        "precio": 6.5,
+        "stock": 11,
+        "estado": true,
+        "categoriaId": 93
+      },
+      "status": 201,
+      "response": {
+        "id": 25,
+        "nombre": "AA Auto S8 343626 secundario",
+        "precio": 6.5,
+        "stock": 11,
+        "estado": true,
+        "categoriaId": 93,
+        "categoriaNombre": "Auto S8 343626 otra",
+        "fechaCreacion": "2026-10-04T11:45:43.7992839",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 otro",
+        "precio": 7.5,
+        "stock": 12,
+        "estado": true,
+        "categoriaId": 94
+      },
+      "status": 201,
+      "response": {
+        "id": 26,
+        "nombre": "AA Auto S8 343626 otro",
+        "precio": 7.5,
+        "stock": 12,
+        "estado": true,
+        "categoriaId": 94,
+        "categoriaNombre": "Auto S8 343626 tercera",
+        "fechaCreacion": "2026-10-04T11:45:43.8129366",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 historico",
+        "precio": 8.5,
+        "stock": 13,
+        "estado": false,
+        "categoriaId": 99
+      },
+      "status": 201,
+      "response": {
+        "id": 27,
+        "nombre": "AA Auto S8 343626 historico",
+        "precio": 8.5,
+        "stock": 13,
+        "estado": false,
+        "categoriaId": 99,
+        "categoriaNombre": "Auto S8 343626 historial",
+        "fechaCreacion": "2026-10-04T11:45:43.8258119",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 venta",
+        "precio": 9.5,
+        "stock": 14,
+        "estado": true,
+        "categoriaId": 96
+      },
+      "status": 201,
+      "response": {
+        "id": 28,
+        "nombre": "AA Auto S8 343626 venta",
+        "precio": 9.5,
+        "stock": 14,
+        "estado": true,
+        "categoriaId": 96,
+        "categoriaNombre": "Auto S8 343626 ventas",
+        "fechaCreacion": "2026-10-04T11:45:43.8385711",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 carrera",
+        "precio": 10.5,
+        "stock": 15,
+        "estado": true,
+        "categoriaId": 97
+      },
+      "status": 201,
+      "response": {
+        "id": 29,
+        "nombre": "AA Auto S8 343626 carrera",
+        "precio": 10.5,
+        "stock": 15,
+        "estado": true,
+        "categoriaId": 97,
+        "categoriaNombre": "Auto S8 343626 carrera",
+        "fechaCreacion": "2026-10-04T11:45:43.8516996",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 sexto",
+        "precio": 11.5,
+        "stock": 16,
+        "estado": true,
+        "categoriaId": 92
+      },
+      "status": 201,
+      "response": {
+        "id": 30,
+        "nombre": "AA Auto S8 343626 sexto",
+        "precio": 11.5,
+        "stock": 16,
+        "estado": true,
+        "categoriaId": 92,
+        "categoriaNombre": "Auto S8 343626 activa",
+        "fechaCreacion": "2026-10-04T11:45:43.865391",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 septimo",
+        "precio": 12.5,
+        "stock": 17,
+        "estado": true,
+        "categoriaId": 93
+      },
+      "status": 201,
+      "response": {
+        "id": 31,
+        "nombre": "AA Auto S8 343626 septimo",
+        "precio": 12.5,
+        "stock": 17,
+        "estado": true,
+        "categoriaId": 93,
+        "categoriaNombre": "Auto S8 343626 otra",
+        "fechaCreacion": "2026-10-04T11:45:43.8780049",
+        "fechaModificacion": null
+      }
+    }
+  ]
+}

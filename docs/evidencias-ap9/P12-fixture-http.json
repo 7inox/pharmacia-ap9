@@ -1,0 +1,17 @@
+{
+  "id": 8,
+  "fecha": "2026-10-11T10:55:39.08164",
+  "clienteId": 22,
+  "clienteNombre": "Prueba S9 2 Tinocó",
+  "estado": "ANULADA",
+  "total": 0.1,
+  "detalles": [
+    {
+      "productoId": 44,
+      "productoNombre": "S9 Tinoco producto 4",
+      "cantidad": 1,
+      "precio": 0.1,
+      "subtotal": 0.1
+    }
+  ]
+}

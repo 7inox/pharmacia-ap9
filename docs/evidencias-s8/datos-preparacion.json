@@ -1,0 +1,489 @@
+{
+  "marca": "Auto S8 343626",
+  "cats": {
+    "activa": {
+      "id": 92,
+      "nombre": "Auto S8 343626 activa",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.6787315",
+      "fechaModificacion": "2026-10-04T11:45:43.6787315"
+    },
+    "otra": {
+      "id": 93,
+      "nombre": "Auto S8 343626 otra",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.6966288",
+      "fechaModificacion": "2026-10-04T11:45:43.6966288"
+    },
+    "tercera": {
+      "id": 94,
+      "nombre": "Auto S8 343626 tercera",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.7085446",
+      "fechaModificacion": "2026-10-04T11:45:43.7085446"
+    },
+    "inactiva": {
+      "id": 95,
+      "nombre": "Auto S8 343626 inactiva",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": false,
+      "fechaCreacion": "2026-10-04T11:45:43.7203541",
+      "fechaModificacion": "2026-10-04T11:45:43.7203541"
+    },
+    "ventas": {
+      "id": 96,
+      "nombre": "Auto S8 343626 ventas",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.7311389",
+      "fechaModificacion": "2026-10-04T11:45:43.7311389"
+    },
+    "carrera": {
+      "id": 97,
+      "nombre": "Auto S8 343626 carrera",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.7428855",
+      "fechaModificacion": "2026-10-04T11:45:43.7428855"
+    },
+    "temporal": {
+      "id": 98,
+      "nombre": "Auto S8 343626 temporal",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.7557528",
+      "fechaModificacion": "2026-10-04T11:45:43.7557528"
+    },
+    "historial": {
+      "id": 99,
+      "nombre": "Auto S8 343626 historial",
+      "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+      "estado": true,
+      "fechaCreacion": "2026-10-04T11:45:43.7677415",
+      "fechaModificacion": "2026-10-04T11:45:43.7677415"
+    }
+  },
+  "productos": {
+    "principal": {
+      "id": 24,
+      "nombre": "AA Auto S8 343626 principal",
+      "precio": 5.5,
+      "stock": 10,
+      "estado": true,
+      "categoriaId": 92,
+      "categoriaNombre": "Auto S8 343626 activa",
+      "fechaCreacion": "2026-10-04T11:45:43.7838122",
+      "fechaModificacion": null
+    },
+    "secundario": {
+      "id": 25,
+      "nombre": "AA Auto S8 343626 secundario",
+      "precio": 6.5,
+      "stock": 11,
+      "estado": true,
+      "categoriaId": 93,
+      "categoriaNombre": "Auto S8 343626 otra",
+      "fechaCreacion": "2026-10-04T11:45:43.7992839",
+      "fechaModificacion": null
+    },
+    "otro": {
+      "id": 26,
+      "nombre": "AA Auto S8 343626 otro",
+      "precio": 7.5,
+      "stock": 12,
+      "estado": true,
+      "categoriaId": 94,
+      "categoriaNombre": "Auto S8 343626 tercera",
+      "fechaCreacion": "2026-10-04T11:45:43.8129366",
+      "fechaModificacion": null
+    },
+    "historico": {
+      "id": 27,
+      "nombre": "AA Auto S8 343626 historico",
+      "precio": 8.5,
+      "stock": 13,
+      "estado": false,
+      "categoriaId": 99,
+      "categoriaNombre": "Auto S8 343626 historial",
+      "fechaCreacion": "2026-10-04T11:45:43.8258119",
+      "fechaModificacion": null
+    },
+    "venta": {
+      "id": 28,
+      "nombre": "AA Auto S8 343626 venta",
+      "precio": 9.5,
+      "stock": 14,
+      "estado": true,
+      "categoriaId": 96,
+      "categoriaNombre": "Auto S8 343626 ventas",
+      "fechaCreacion": "2026-10-04T11:45:43.8385711",
+      "fechaModificacion": null
+    },
+    "carrera": {
+      "id": 29,
+      "nombre": "AA Auto S8 343626 carrera",
+      "precio": 10.5,
+      "stock": 15,
+      "estado": true,
+      "categoriaId": 97,
+      "categoriaNombre": "Auto S8 343626 carrera",
+      "fechaCreacion": "2026-10-04T11:45:43.8516996",
+      "fechaModificacion": null
+    },
+    "sexto": {
+      "id": 30,
+      "nombre": "AA Auto S8 343626 sexto",
+      "precio": 11.5,
+      "stock": 16,
+      "estado": true,
+      "categoriaId": 92,
+      "categoriaNombre": "Auto S8 343626 activa",
+      "fechaCreacion": "2026-10-04T11:45:43.865391",
+      "fechaModificacion": null
+    },
+    "septimo": {
+      "id": 31,
+      "nombre": "AA Auto S8 343626 septimo",
+      "precio": 12.5,
+      "stock": 17,
+      "estado": true,
+      "categoriaId": 93,
+      "categoriaNombre": "Auto S8 343626 otra",
+      "fechaCreacion": "2026-10-04T11:45:43.8780049",
+      "fechaModificacion": null
+    }
+  },
+  "preparacion": [
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 activa",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 92,
+        "nombre": "Auto S8 343626 activa",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.6787315",
+        "fechaModificacion": "2026-10-04T11:45:43.6787315"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 otra",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 93,
+        "nombre": "Auto S8 343626 otra",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.6966288",
+        "fechaModificacion": "2026-10-04T11:45:43.6966288"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 tercera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 94,
+        "nombre": "Auto S8 343626 tercera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7085446",
+        "fechaModificacion": "2026-10-04T11:45:43.7085446"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 inactiva",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": false
+      },
+      "status": 201,
+      "response": {
+        "id": 95,
+        "nombre": "Auto S8 343626 inactiva",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": false,
+        "fechaCreacion": "2026-10-04T11:45:43.7203541",
+        "fechaModificacion": "2026-10-04T11:45:43.7203541"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 ventas",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 96,
+        "nombre": "Auto S8 343626 ventas",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7311389",
+        "fechaModificacion": "2026-10-04T11:45:43.7311389"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 carrera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 97,
+        "nombre": "Auto S8 343626 carrera",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7428855",
+        "fechaModificacion": "2026-10-04T11:45:43.7428855"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 temporal",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 98,
+        "nombre": "Auto S8 343626 temporal",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7557528",
+        "fechaModificacion": "2026-10-04T11:45:43.7557528"
+      }
+    },
+    {
+      "path": "/categorias",
+      "method": "POST",
+      "body": {
+        "nombre": "Auto S8 343626 historial",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true
+      },
+      "status": 201,
+      "response": {
+        "id": 99,
+        "nombre": "Auto S8 343626 historial",
+        "descripcion": "Categoría exclusiva para pruebas autónomas S8.",
+        "estado": true,
+        "fechaCreacion": "2026-10-04T11:45:43.7677415",
+        "fechaModificacion": "2026-10-04T11:45:43.7677415"
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 principal",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 92
+      },
+      "status": 201,
+      "response": {
+        "id": 24,
+        "nombre": "AA Auto S8 343626 principal",
+        "precio": 5.5,
+        "stock": 10,
+        "estado": true,
+        "categoriaId": 92,
+        "categoriaNombre": "Auto S8 343626 activa",
+        "fechaCreacion": "2026-10-04T11:45:43.7838122",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 secundario",
+        "precio": 6.5,
+        "stock": 11,
+        "estado": true,
+        "categoriaId": 93
+      },
+      "status": 201,
+      "response": {
+        "id": 25,
+        "nombre": "AA Auto S8 343626 secundario",
+        "precio": 6.5,
+        "stock": 11,
+        "estado": true,
+        "categoriaId": 93,
+        "categoriaNombre": "Auto S8 343626 otra",
+        "fechaCreacion": "2026-10-04T11:45:43.7992839",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 otro",
+        "precio": 7.5,
+        "stock": 12,
+        "estado": true,
+        "categoriaId": 94
+      },
+      "status": 201,
+      "response": {
+        "id": 26,
+        "nombre": "AA Auto S8 343626 otro",
+        "precio": 7.5,
+        "stock": 12,
+        "estado": true,
+        "categoriaId": 94,
+        "categoriaNombre": "Auto S8 343626 tercera",
+        "fechaCreacion": "2026-10-04T11:45:43.8129366",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 historico",
+        "precio": 8.5,
+        "stock": 13,
+        "estado": false,
+        "categoriaId": 99
+      },
+      "status": 201,
+      "response": {
+        "id": 27,
+        "nombre": "AA Auto S8 343626 historico",
+        "precio": 8.5,
+        "stock": 13,
+        "estado": false,
+        "categoriaId": 99,
+        "categoriaNombre": "Auto S8 343626 historial",
+        "fechaCreacion": "2026-10-04T11:45:43.8258119",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 venta",
+        "precio": 9.5,
+        "stock": 14,
+        "estado": true,
+        "categoriaId": 96
+      },
+      "status": 201,
+      "response": {
+        "id": 28,
+        "nombre": "AA Auto S8 343626 venta",
+        "precio": 9.5,
+        "stock": 14,
+        "estado": true,
+        "categoriaId": 96,
+        "categoriaNombre": "Auto S8 343626 ventas",
+        "fechaCreacion": "2026-10-04T11:45:43.8385711",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 carrera",
+        "precio": 10.5,
+        "stock": 15,
+        "estado": true,
+        "categoriaId": 97
+      },
+      "status": 201,
+      "response": {
+        "id": 29,
+        "nombre": "AA Auto S8 343626 carrera",
+        "precio": 10.5,
+        "stock": 15,
+        "estado": true,
+        "categoriaId": 97,
+        "categoriaNombre": "Auto S8 343626 carrera",
+        "fechaCreacion": "2026-10-04T11:45:43.8516996",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 sexto",
+        "precio": 11.5,
+        "stock": 16,
+        "estado": true,
+        "categoriaId": 92
+      },
+      "status": 201,
+      "response": {
+        "id": 30,
+        "nombre": "AA Auto S8 343626 sexto",
+        "precio": 11.5,
+        "stock": 16,
+        "estado": true,
+        "categoriaId": 92,
+        "categoriaNombre": "Auto S8 343626 activa",
+        "fechaCreacion": "2026-10-04T11:45:43.865391",
+        "fechaModificacion": null
+      }
+    },
+    {
+      "path": "/productos",
+      "method": "POST",
+      "body": {
+        "nombre": "AA Auto S8 343626 septimo",
+        "precio": 12.5,
+        "stock": 17,
+        "estado": true,
+        "categoriaId": 93
+      },
+      "status": 201,
+      "response": {
+        "id": 31,
+        "nombre": "AA Auto S8 343626 septimo",
+        "precio": 12.5,
+        "stock": 17,
+        "estado": true,
+        "categoriaId": 93,
+        "categoriaNombre": "Auto S8 343626 otra",
+        "fechaCreacion": "2026-10-04T11:45:43.8780049",
+        "fechaModificacion": null
+      }
+    }
+  ]
+}

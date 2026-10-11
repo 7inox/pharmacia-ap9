@@ -1,0 +1,65 @@
+{
+  "tipo": "Pruebas de lógica con HTTP simulado; no sustituyen evidencias SPA/API real",
+  "pruebas": [
+    {
+      "nombre": "Cliente inactivo excluido y búsqueda sin tilde",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Enter agrega el primero sin confirmar",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "12.50 × 3 = 37.50",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "18.90 × 3 = 56.70",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Quitar línea recalcula 114.20 a 57.50",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Sin cliente ni líneas no abre resumen",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Cantidad cero, decimal y negativa rechazadas",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Cantidad 3 supera stock 2",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Producto repetido incrementa sin duplicar línea",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Volver del resumen no envía POST",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Doble confirmación solo envía un POST",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "409 conserva cliente y líneas; habilita corrección",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Reporte total y barras proporcionales",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Reporte rechaza rango invertido sin petición",
+      "estado": "Pasa"
+    },
+    {
+      "nombre": "Servicio omite fechas vacías",
+      "estado": "Pasa"
+    }
+  ]
+}

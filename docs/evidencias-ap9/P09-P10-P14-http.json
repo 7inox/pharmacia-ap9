@@ -1,0 +1,48 @@
+{
+  "producto46": {
+    "id": 46,
+    "nombre": "S9 Tinoco producto 6",
+    "precio": 5.0,
+    "stock": 26,
+    "estado": true,
+    "categoriaId": 101,
+    "categoriaNombre": "S9 Tinoco 11oct",
+    "fechaCreacion": "2026-10-11T09:50:47.6447547",
+    "fechaModificacion": "2026-10-11T10:54:46.7329302"
+  },
+  "producto42": {
+    "id": 42,
+    "nombre": "S9 Tinoco producto 2",
+    "precio": 18.9,
+    "stock": 24,
+    "estado": true,
+    "categoriaId": 101,
+    "categoriaNombre": "S9 Tinoco 11oct",
+    "fechaCreacion": "2026-10-11T09:50:47.5535716",
+    "fechaModificacion": "2026-10-11T10:54:46.7307636"
+  },
+  "venta": {
+    "id": 7,
+    "fecha": "2026-10-11T10:54:46.6488477",
+    "clienteId": 21,
+    "clienteNombre": "Prueba S9 1 Tinocó",
+    "estado": "REGISTRADA",
+    "total": 66.7,
+    "detalles": [
+      {
+        "productoId": 42,
+        "productoNombre": "S9 Tinoco producto 2",
+        "cantidad": 3,
+        "precio": 18.9,
+        "subtotal": 56.7
+      },
+      {
+        "productoId": 46,
+        "productoNombre": "S9 Tinoco producto 6",
+        "cantidad": 2,
+        "precio": 5,
+        "subtotal": 10
+      }
+    ]
+  }
+}

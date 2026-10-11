@@ -1,0 +1,165 @@
+{
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:8080/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "name": "PharmaSoft - S9 Ventas",
+    "description": "Pruebas reales AA9. V-05 y V-02 documentan fallas del backend Practica.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "C-04 Consultar venta",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": "{{baseUrl}}/ventas/1"
+      }
+    },
+    {
+      "name": "V-05 Producto duplicado",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": "{{baseUrl}}/ventas",
+        "body": {
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "mode": "raw",
+          "raw": "{\r\n  \"detalles\": [\r\n    {\r\n      \"cantidad\": 1,\r\n      \"productoId\": 47\r\n    },\r\n    {\r\n      \"cantidad\": 1,\r\n      \"productoId\": 47\r\n    }\r\n  ],\r\n  \"clienteId\": 21\r\n}"
+        }
+      }
+    },
+    {
+      "name": "M-02 Cliente inactivo",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": "{{baseUrl}}/ventas",
+        "body": {
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "mode": "raw",
+          "raw": "{\r\n  \"detalles\": [\r\n    {\r\n      \"cantidad\": 1,\r\n      \"productoId\": 41\r\n    }\r\n  ],\r\n  \"clienteId\": 24\r\n}"
+        }
+      }
+    },
+    {
+      "name": "V-02 Cantidad decimal",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": "{{baseUrl}}/ventas",
+        "body": {
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "mode": "raw",
+          "raw": "{\r\n  \"detalles\": [\r\n    {\r\n      \"cantidad\": 2.5,\r\n      \"productoId\": 41\r\n    }\r\n  ],\r\n  \"clienteId\": 21\r\n}"
+        }
+      }
+    },
+    {
+      "name": "V-06 Cantidad negativa",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": "{{baseUrl}}/ventas",
+        "body": {
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "mode": "raw",
+          "raw": "{\r\n  \"detalles\": [\r\n    {\r\n      \"cantidad\": -1,\r\n      \"productoId\": 41\r\n    }\r\n  ],\r\n  \"clienteId\": 21\r\n}"
+        }
+      }
+    },
+    {
+      "name": "M-01 Stock agotado",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": "{{baseUrl}}/ventas",
+        "body": {
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "mode": "raw",
+          "raw": "{\r\n  \"detalles\": [\r\n    {\r\n      \"cantidad\": 2,\r\n      \"productoId\": 43\r\n    }\r\n  ],\r\n  \"clienteId\": 22\r\n}"
+        }
+      }
+    },
+    {
+      "name": "Reporte histórico",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": "{{baseUrl}}/reportes/ventas-por-categoria"
+      }
+    },
+    {
+      "name": "Reporte por fecha",
+      "request": {
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": "{{baseUrl}}/reportes/ventas-por-categoria?desde=2026-10-11&hasta=2026-10-11"
+      }
+    }
+  ]
+}

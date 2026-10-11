@@ -1,0 +1,43 @@
+{
+  "ruta": "ventas",
+  "metodo": "Post",
+  "id": "V-05",
+  "respuesta": {
+    "id": 2,
+    "fecha": "2026-10-11T09:52:25.9833035",
+    "clienteId": 21,
+    "clienteNombre": "Prueba S9 1 Tinocó",
+    "estado": "REGISTRADA",
+    "total": 14,
+    "detalles": [
+      {
+        "productoId": 47,
+        "productoNombre": "S9 Tinoco producto 7",
+        "cantidad": 1,
+        "precio": 7,
+        "subtotal": 7
+      },
+      {
+        "productoId": 47,
+        "productoNombre": "S9 Tinoco producto 7",
+        "cantidad": 1,
+        "precio": 7,
+        "subtotal": 7
+      }
+    ]
+  },
+  "http": 201,
+  "solicitud": {
+    "detalles": [
+      {
+        "productoId": 47,
+        "cantidad": 1
+      },
+      {
+        "productoId": 47,
+        "cantidad": 1
+      }
+    ],
+    "clienteId": 21
+  }
+}

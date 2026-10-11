@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Formulario vacío bloquea resumen",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Búsqueda normaliza tildes y excluye inactivos",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "FormArray recalcula 18.90 x 3",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Repetidos incrementan una sola línea",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Enter agrega y evita submit",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Cantidades inválidas y stock bloquean resumen",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Quitar recalcula total",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Doble confirmación envía un POST sin precio ni total",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "409 conserva cliente y detalle",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Registro navega a comprobante e imprime si se selecciona",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Consulta suma céntimos y excluye anuladas",
+    "estado": "Pasa"
+  },
+  {
+    "nombre": "Rango invertido no llama al servicio",
+    "estado": "Pasa"
+  }
+]

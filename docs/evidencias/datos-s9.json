@@ -1,0 +1,150 @@
+{
+  "categoria": {
+    "id": 101,
+    "nombre": "S9 Tinoco 11oct",
+    "descripcion": "Datos exclusivos de pruebas AA9",
+    "estado": true,
+    "fechaCreacion": "2026-10-11T09:50:47.2661738",
+    "fechaModificacion": "2026-10-11T09:50:47.2661738"
+  },
+  "clientes": [
+    {
+      "id": 21,
+      "dni": "99101101",
+      "nombres": "Prueba S9 1",
+      "apellidos": "Tinocó",
+      "email": "s9.1@example.invalid",
+      "telefono": "900000000",
+      "direccion": "Datos académicos sintéticos",
+      "estado": true,
+      "fechaCreacion": "2026-10-11T09:50:47.420217",
+      "fechaModificacion": null
+    },
+    {
+      "id": 22,
+      "dni": "99101102",
+      "nombres": "Prueba S9 2",
+      "apellidos": "Tinocó",
+      "email": "s9.2@example.invalid",
+      "telefono": "900000000",
+      "direccion": "Datos académicos sintéticos",
+      "estado": true,
+      "fechaCreacion": "2026-10-11T09:50:47.4417116",
+      "fechaModificacion": null
+    },
+    {
+      "id": 23,
+      "dni": "99101103",
+      "nombres": "Prueba S9 3",
+      "apellidos": "Tinocó",
+      "email": "s9.3@example.invalid",
+      "telefono": "900000000",
+      "direccion": "Datos académicos sintéticos",
+      "estado": true,
+      "fechaCreacion": "2026-10-11T09:50:47.4604671",
+      "fechaModificacion": null
+    },
+    {
+      "id": 24,
+      "dni": "99101104",
+      "nombres": "Prueba S9 4",
+      "apellidos": "Tinocó",
+      "email": "s9.4@example.invalid",
+      "telefono": "900000000",
+      "direccion": "Datos académicos sintéticos",
+      "estado": false,
+      "fechaCreacion": "2026-10-11T09:50:47.4763098",
+      "fechaModificacion": null
+    }
+  ],
+  "productos": [
+    {
+      "id": 41,
+      "nombre": "S9 Tinoco producto 1",
+      "precio": 12.5,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.5263469",
+      "fechaModificacion": null
+    },
+    {
+      "id": 42,
+      "nombre": "S9 Tinoco producto 2",
+      "precio": 18.9,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.5535716",
+      "fechaModificacion": null
+    },
+    {
+      "id": 43,
+      "nombre": "S9 Tinoco producto 3",
+      "precio": 10.0,
+      "stock": 2,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.5699321",
+      "fechaModificacion": null
+    },
+    {
+      "id": 44,
+      "nombre": "S9 Tinoco producto 4",
+      "precio": 0.1,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.5920706",
+      "fechaModificacion": null
+    },
+    {
+      "id": 45,
+      "nombre": "S9 Tinoco producto 5",
+      "precio": 0.2,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.6195209",
+      "fechaModificacion": null
+    },
+    {
+      "id": 46,
+      "nombre": "S9 Tinoco producto 6",
+      "precio": 5.0,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.6447547",
+      "fechaModificacion": null
+    },
+    {
+      "id": 47,
+      "nombre": "S9 Tinoco producto 7",
+      "precio": 7.0,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.6682719",
+      "fechaModificacion": null
+    },
+    {
+      "id": 48,
+      "nombre": "S9 Tinoco producto 8",
+      "precio": 9.0,
+      "stock": 30,
+      "estado": true,
+      "categoriaId": 101,
+      "categoriaNombre": "S9 Tinoco 11oct",
+      "fechaCreacion": "2026-10-11T09:50:47.693146",
+      "fechaModificacion": null
+    }
+  ]
+}

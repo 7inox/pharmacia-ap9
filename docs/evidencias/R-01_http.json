@@ -1,0 +1,13 @@
+{
+  "ruta": "reportes/ventas-por-categoria",
+  "metodo": "Get",
+  "id": "R-01",
+  "respuesta": {
+    "categoriaId": 101,
+    "categoriaNombre": "S9 Tinoco 11oct",
+    "unidadesVendidas": 9,
+    "montoTotal": 105.7
+  },
+  "http": 200,
+  "solicitud": null
+}

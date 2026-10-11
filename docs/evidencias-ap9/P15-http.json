@@ -1,0 +1,215 @@
+{
+  "producto": {
+    "id": 49,
+    "nombre": "AP9 Tinoco stock prueba",
+    "precio": 4.2,
+    "stock": 0,
+    "estado": true,
+    "categoriaId": 101,
+    "categoriaNombre": "S9 Tinoco 11oct",
+    "fechaCreacion": "2026-10-11T10:57:43.582407",
+    "fechaModificacion": "2026-10-11T11:02:52.1721227"
+  },
+  "request": {
+    "clienteId": 22,
+    "detalles": [
+      {
+        "productoId": 49,
+        "cantidad": 2
+      }
+    ]
+  },
+  "response": {
+    "timestamp": "2026-10-11T11:03:12.0108909",
+    "status": 409,
+    "error": "Conflict",
+    "message": "Stock insuficiente para AP9 Tinoco stock prueba. Disponible: 0, solicitado: 2",
+    "path": "/api/v1/ventas",
+    "validationErrors": null
+  },
+  "status": 409,
+  "ventas": [
+    {
+      "id": 1,
+      "fecha": "2026-10-11T09:52:01.5111156",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 66.7,
+      "detalles": [
+        {
+          "productoId": 42,
+          "productoNombre": "S9 Tinoco producto 2",
+          "cantidad": 3,
+          "precio": 18.9,
+          "subtotal": 56.7
+        },
+        {
+          "productoId": 46,
+          "productoNombre": "S9 Tinoco producto 6",
+          "cantidad": 2,
+          "precio": 5,
+          "subtotal": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fecha": "2026-10-11T09:52:25.9833035",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 14,
+      "detalles": [
+        {
+          "productoId": 47,
+          "productoNombre": "S9 Tinoco producto 7",
+          "cantidad": 1,
+          "precio": 7,
+          "subtotal": 7
+        },
+        {
+          "productoId": 47,
+          "productoNombre": "S9 Tinoco producto 7",
+          "cantidad": 1,
+          "precio": 7,
+          "subtotal": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fecha": "2026-10-11T10:54:46.6488477",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 66.7,
+      "detalles": [
+        {
+          "productoId": 42,
+          "productoNombre": "S9 Tinoco producto 2",
+          "cantidad": 3,
+          "precio": 18.9,
+          "subtotal": 56.7
+        },
+        {
+          "productoId": 46,
+          "productoNombre": "S9 Tinoco producto 6",
+          "cantidad": 2,
+          "precio": 5,
+          "subtotal": 10
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fecha": "2026-10-11T10:55:39.08164",
+      "clienteId": 22,
+      "clienteNombre": "Prueba S9 2 Tinocó",
+      "estado": "ANULADA",
+      "total": 0.1,
+      "detalles": [
+        {
+          "productoId": 44,
+          "productoNombre": "S9 Tinoco producto 4",
+          "cantidad": 1,
+          "precio": 0.1,
+          "subtotal": 0.1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fecha": "2026-10-11T09:52:26.0505145",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 25,
+      "detalles": [
+        {
+          "productoId": 41,
+          "productoNombre": "S9 Tinoco producto 1",
+          "cantidad": 2,
+          "precio": 12.5,
+          "subtotal": 25
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fecha": "2026-10-11T09:53:24.9151758",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 20,
+      "detalles": [
+        {
+          "productoId": 43,
+          "productoNombre": "S9 Tinoco producto 3",
+          "cantidad": 2,
+          "precio": 10,
+          "subtotal": 20
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fecha": "2026-10-11T10:01:53.3081726",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 25,
+      "detalles": [
+        {
+          "productoId": 41,
+          "productoNombre": "S9 Tinoco producto 1",
+          "cantidad": 2,
+          "precio": 12.5,
+          "subtotal": 25
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fecha": "2026-10-11T10:03:24.114884",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 14,
+      "detalles": [
+        {
+          "productoId": 47,
+          "productoNombre": "S9 Tinoco producto 7",
+          "cantidad": 1,
+          "precio": 7,
+          "subtotal": 7
+        },
+        {
+          "productoId": 47,
+          "productoNombre": "S9 Tinoco producto 7",
+          "cantidad": 1,
+          "precio": 7,
+          "subtotal": 7
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fecha": "2026-10-11T11:02:52.1625922",
+      "clienteId": 21,
+      "clienteNombre": "Prueba S9 1 Tinocó",
+      "estado": "REGISTRADA",
+      "total": 8.4,
+      "detalles": [
+        {
+          "productoId": 49,
+          "productoNombre": "AP9 Tinoco stock prueba",
+          "cantidad": 2,
+          "precio": 4.2,
+          "subtotal": 8.4
+        }
+      ]
+    }
+  ],
+  "url": "http://localhost:8081/api/v1/ventas"
+}

@@ -1,0 +1,111 @@
+{
+  "url": "http://localhost:8081/api/v1/ventas/buscar?pagina=0&tamanio=5&ordenarPor=fecha&direccion=desc&clienteId=21&estado=REGISTRADA&desde=2026-10-11&hasta=2026-10-11",
+  "respuesta": {
+    "contenido": [
+      {
+        "id": 7,
+        "fecha": "2026-10-11T10:54:46.6488477",
+        "clienteId": 21,
+        "clienteNombre": "Prueba S9 1 Tinocó",
+        "estado": "REGISTRADA",
+        "total": 66.7,
+        "detalles": [
+          {
+            "productoId": 46,
+            "productoNombre": "S9 Tinoco producto 6",
+            "cantidad": 2,
+            "precio": 5,
+            "subtotal": 10
+          },
+          {
+            "productoId": 42,
+            "productoNombre": "S9 Tinoco producto 2",
+            "cantidad": 3,
+            "precio": 18.9,
+            "subtotal": 56.7
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "fecha": "2026-10-11T10:03:24.114884",
+        "clienteId": 21,
+        "clienteNombre": "Prueba S9 1 Tinocó",
+        "estado": "REGISTRADA",
+        "total": 14,
+        "detalles": [
+          {
+            "productoId": 47,
+            "productoNombre": "S9 Tinoco producto 7",
+            "cantidad": 1,
+            "precio": 7,
+            "subtotal": 7
+          },
+          {
+            "productoId": 47,
+            "productoNombre": "S9 Tinoco producto 7",
+            "cantidad": 1,
+            "precio": 7,
+            "subtotal": 7
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "fecha": "2026-10-11T10:01:53.3081726",
+        "clienteId": 21,
+        "clienteNombre": "Prueba S9 1 Tinocó",
+        "estado": "REGISTRADA",
+        "total": 25,
+        "detalles": [
+          {
+            "productoId": 41,
+            "productoNombre": "S9 Tinoco producto 1",
+            "cantidad": 2,
+            "precio": 12.5,
+            "subtotal": 25
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "fecha": "2026-10-11T09:53:24.9151758",
+        "clienteId": 21,
+        "clienteNombre": "Prueba S9 1 Tinocó",
+        "estado": "REGISTRADA",
+        "total": 20,
+        "detalles": [
+          {
+            "productoId": 43,
+            "productoNombre": "S9 Tinoco producto 3",
+            "cantidad": 2,
+            "precio": 10,
+            "subtotal": 20
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "fecha": "2026-10-11T09:52:26.0505145",
+        "clienteId": 21,
+        "clienteNombre": "Prueba S9 1 Tinocó",
+        "estado": "REGISTRADA",
+        "total": 25,
+        "detalles": [
+          {
+            "productoId": 41,
+            "productoNombre": "S9 Tinoco producto 1",
+            "cantidad": 2,
+            "precio": 12.5,
+            "subtotal": 25
+          }
+        ]
+      }
+    ],
+    "pagina": 0,
+    "tamanio": 5,
+    "totalElementos": 7,
+    "totalPaginas": 2,
+    "ultima": false
+  }
+}

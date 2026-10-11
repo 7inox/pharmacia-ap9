@@ -1,0 +1,11 @@
+{
+  "id": 49,
+  "nombre": "AP9 Tinoco stock prueba",
+  "precio": 4.2,
+  "stock": 2,
+  "estado": true,
+  "categoriaId": 101,
+  "categoriaNombre": "S9 Tinoco 11oct",
+  "fechaCreacion": "2026-10-11T10:57:43.582407",
+  "fechaModificacion": null
+}

@@ -1,0 +1,23 @@
+{
+  "ruta": "ventas",
+  "metodo": "Post",
+  "id": "M-02",
+  "respuesta": {
+    "timestamp": "2026-10-11T09:52:26.0186634",
+    "status": 409,
+    "error": "Conflict",
+    "message": "No se puede registrar una venta para un cliente inactivo",
+    "path": "/api/v1/ventas",
+    "validationErrors": null
+  },
+  "http": 409,
+  "solicitud": {
+    "detalles": [
+      {
+        "productoId": 41,
+        "cantidad": 1
+      }
+    ],
+    "clienteId": 24
+  }
+}
