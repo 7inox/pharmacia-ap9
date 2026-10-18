@@ -1,0 +1,10 @@
+{
+  "id": "X-02",
+  "grupo": "Validación",
+  "caso": "Rol inexistente",
+  "esperado": 404,
+  "obtenido": 404,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:11",
+  "mensaje": "Algún rol no existe"
+}

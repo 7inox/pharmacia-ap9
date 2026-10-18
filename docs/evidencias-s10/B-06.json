@@ -1,0 +1,9 @@
+{
+  "id": "B-06",
+  "grupo": "B3",
+  "caso": "ADMIN desactiva usuario",
+  "esperado": 200,
+  "obtenido": 200,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:12"
+}

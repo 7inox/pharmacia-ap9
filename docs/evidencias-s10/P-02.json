@@ -1,0 +1,10 @@
+{
+  "id": "P-02",
+  "grupo": "Permisos",
+  "caso": "VENDEDOR no crea categoría",
+  "esperado": 403,
+  "obtenido": 403,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10",
+  "mensaje": "No tiene permisos para realizar esta operación"
+}

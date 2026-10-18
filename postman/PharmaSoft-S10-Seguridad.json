@@ -1,0 +1,1183 @@
+{
+  "info": {
+    "name": "PharmaSoft - S10 Seguridad",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "28 casos de la matriz S10. Use solo un entorno local de desarrollo. Los casos B alteran usuarios demo; restaurar al final."
+  },
+  "item": [
+    {
+      "name": "A - Autenticación",
+      "item": [
+        {
+          "name": "A-01 - Login ADMIN",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "A-01: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"admin\", \"password\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"A-01: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "if(pm.response.code===200) pm.collectionVariables.set(\"adminToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "A-02 - Login VENDEDOR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "A-02: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"vendedor\", \"password\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"A-02: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "if(pm.response.code===200) pm.collectionVariables.set(\"vendorToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "A-03 - Contraseña incorrecta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "A-03: HTTP esperado 401. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"admin\", \"password\": \"equivocada123\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"A-03: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "A-04 - Usuario inactivo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "A-04: HTTP esperado 401. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"inactivo\", \"password\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"A-04: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "00 - Preparación",
+      "item": [
+        {
+          "name": "SET-01 - Login ALMACENERO",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "SET-01: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"almacen\", \"password\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"SET-01: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "if(pm.response.code===200) pm.collectionVariables.set(\"storeToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SET-02 - Login SUPERVISOR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "SET-02: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"supervisor\", \"password\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"SET-02: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "if(pm.response.code===200) pm.collectionVariables.set(\"superToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SET-03 - Identificadores de usuarios",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios",
+            "description": "SET-03: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"SET-03: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "for(const u of pm.response.json()) { if(u.username===\"admin\") pm.collectionVariables.set(\"adminId\",u.id); if(u.username===\"vendedor\") pm.collectionVariables.set(\"vendorId\",u.id); if(u.username===\"almacen\") pm.collectionVariables.set(\"storeId\",u.id); }"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SET-04 - Identificadores de roles",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/roles",
+            "description": "SET-04: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"SET-04: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "for(const r of pm.response.json()) { if(r.nombre===\"ADMIN\") pm.collectionVariables.set(\"adminRoleId\",r.id); if(r.nombre===\"VENDEDOR\") pm.collectionVariables.set(\"vendorRoleId\",r.id); if(r.nombre===\"ALMACENERO\") pm.collectionVariables.set(\"storeRoleId\",r.id); }"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "T - Token",
+      "item": [
+        {
+          "name": "T-01 - Sin token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/productos",
+            "description": "T-01: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"T-01: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T-02 - Mal formado",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{malformedToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/productos",
+            "description": "T-02: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"T-02: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T-03 - Alterado",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{tamperedToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/productos",
+            "description": "T-03: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set(\"tamperedToken\", pm.collectionVariables.get(\"adminToken\").slice(0,-2)+\"zz\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"T-03: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T-04 - Expirado",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{expiredToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/productos",
+            "description": "Generar un JWT firmado y expirado con la clave del entorno de pruebas; no se incluye la clave en la colección."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"T-04: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "T-05 - Válido",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/me",
+            "description": "T-05: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"T-05: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P - Permisos",
+      "item": [
+        {
+          "name": "P-01 - Vendedor lee productos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/productos",
+            "description": "P-01: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"P-01: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "P-02 - Vendedor no crea categoría",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/categorias",
+            "description": "P-02: HTTP esperado 403. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\": \"NO CREAR\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"P-02: HTTP 403\", () => pm.response.to.have.status(403));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "P-03 - Almacenero no lee clientes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{storeToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/clientes",
+            "description": "P-03: HTTP esperado 403. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"P-03: HTTP 403\", () => pm.response.to.have.status(403));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "P-04 - Admin ve reportes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/reportes/ventas-por-categoria",
+            "description": "P-04: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"P-04: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "U - Usuarios",
+      "item": [
+        {
+          "name": "U-01 - Anónimo no lista usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/usuarios",
+            "description": "U-01: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"U-01: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "U-02 - Vendedor no lista usuarios",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios",
+            "description": "U-02: HTTP esperado 403. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"U-02: HTTP 403\", () => pm.response.to.have.status(403));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "C - Conexión",
+      "item": [
+        {
+          "name": "C-01 - Datos de categorías Oracle",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/categorias",
+            "description": "C-01: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"C-01: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "pm.test(\"Hay datos reales\", () => pm.expect(pm.response.json().length).to.be.above(0));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "X - Casos propios",
+      "item": [
+        {
+          "name": "X-01 - Preflight CORS Angular",
+          "request": {
+            "method": "OPTIONS",
+            "header": [
+              {
+                "key": "Origin",
+                "value": "http://localhost:4200"
+              },
+              {
+                "key": "Access-Control-Request-Method",
+                "value": "GET"
+              }
+            ],
+            "url": "{{baseUrl}}/productos",
+            "description": "X-01: HTTP esperado 200. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"X-01: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "X-02 - Rol inexistente",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{vendorId}}/roles",
+            "description": "X-02: HTTP esperado 404. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"rolIds\": [999999]}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"X-02: HTTP 404\", () => pm.response.to.have.status(404));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "X-03 - Usuario inexistente",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/999999/estado",
+            "description": "X-03: HTTP esperado 404. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"estado\": false}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"X-03: HTTP 404\", () => pm.response.to.have.status(404));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "X-04 - Almacenero no ve reportes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{storeToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/reportes/ventas-por-categoria",
+            "description": "X-04: HTTP esperado 403. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"X-04: HTTP 403\", () => pm.response.to.have.status(403));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "B - Nuevos requerimientos",
+      "item": [
+        {
+          "name": "B-01 - Cambiar contraseña",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{superToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/password",
+            "description": "B-01: HTTP esperado 204. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"passwordActual\": \"{{demoPassword}}\", \"passwordNueva\": \"{{newPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-01: HTTP 204\", () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-01a - Token anterior revocado",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{superToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/me",
+            "description": "B-01a: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-01a: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "SET-05 - Login con contraseña nueva",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/login",
+            "description": "SET-05: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"supervisor\", \"password\": \"{{newPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"SET-05: HTTP 200\", () => pm.response.to.have.status(200));",
+                  "if(pm.response.code===200) pm.collectionVariables.set(\"superToken\", pm.response.json().token);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-02 - Contraseña actual errada",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{superToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/password",
+            "description": "B-02: HTTP esperado 409. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"passwordActual\": \"Incorrecta123\", \"passwordNueva\": \"{{newPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-02: HTTP 409\", () => pm.response.to.have.status(409));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-03 - Nueva contraseña igual",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{superToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/password",
+            "description": "B-03: HTTP esperado 409. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"passwordActual\": \"{{newPassword}}\", \"passwordNueva\": \"{{newPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-03: HTTP 409\", () => pm.response.to.have.status(409));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "RESET-01 - Restaurar contraseña demo",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{superToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/auth/password",
+            "description": "RESET-01: HTTP esperado 204. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"passwordActual\": \"{{newPassword}}\", \"passwordNueva\": \"{{demoPassword}}\"}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"RESET-01: HTTP 204\", () => pm.response.to.have.status(204));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-08 - Vendedor no cambia roles",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{storeId}}/roles",
+            "description": "B-08: HTTP esperado 403. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"rolIds\": [{{adminRoleId}}]}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-08: HTTP 403\", () => pm.response.to.have.status(403));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-04 - Asignar rol",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{vendorId}}/roles",
+            "description": "B-04: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"rolIds\": [{{storeRoleId}}]}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-04: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-05 - Admin no pierde ADMIN",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{adminId}}/roles",
+            "description": "B-05: HTTP esperado 409. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"rolIds\": [{{vendorRoleId}}]}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-05: HTTP 409\", () => pm.response.to.have.status(409));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "RESET-02 - Restaurar rol vendedor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{vendorId}}/roles",
+            "description": "RESET-02: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"rolIds\": [{{vendorRoleId}}]}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"RESET-02: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-06 - Desactivar usuario",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{vendorId}}/estado",
+            "description": "B-06: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"estado\": false}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-06: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "B-07 - Token desactivado",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{vendorToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/clientes",
+            "description": "B-07: HTTP esperado 401. Ejecutar los grupos en orden."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"B-07: HTTP 401\", () => pm.response.to.have.status(401));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "RESET-03 - Reactivar vendedor",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": "{{baseUrl}}/usuarios/{{vendorId}}/estado",
+            "description": "RESET-03: HTTP esperado 200. Ejecutar los grupos en orden.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\"estado\": true}"
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"RESET-03: HTTP 200\", () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8081/api/v1"
+    },
+    {
+      "key": "demoPassword",
+      "value": ""
+    },
+    {
+      "key": "newPassword",
+      "value": ""
+    },
+    {
+      "key": "adminToken",
+      "value": ""
+    },
+    {
+      "key": "vendorToken",
+      "value": ""
+    },
+    {
+      "key": "storeToken",
+      "value": ""
+    },
+    {
+      "key": "superToken",
+      "value": ""
+    },
+    {
+      "key": "expiredToken",
+      "value": ""
+    },
+    {
+      "key": "malformedToken",
+      "value": "mal-formado"
+    },
+    {
+      "key": "tamperedToken",
+      "value": ""
+    },
+    {
+      "key": "vendorId",
+      "value": ""
+    },
+    {
+      "key": "adminId",
+      "value": ""
+    },
+    {
+      "key": "storeId",
+      "value": ""
+    },
+    {
+      "key": "adminRoleId",
+      "value": ""
+    },
+    {
+      "key": "vendorRoleId",
+      "value": ""
+    },
+    {
+      "key": "storeRoleId",
+      "value": ""
+    }
+  ]
+}

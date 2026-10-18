@@ -1,0 +1,9 @@
+{
+  "id": "B-04",
+  "grupo": "B2",
+  "caso": "ADMIN cambia roles",
+  "esperado": 200,
+  "obtenido": 200,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:12"
+}
