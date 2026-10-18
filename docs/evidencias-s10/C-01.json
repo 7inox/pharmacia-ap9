@@ -1,0 +1,12 @@
+{
+  "id": "C-01",
+  "grupo": "Conexión",
+  "caso": "Categorías reales en Oracle",
+  "esperado": 200,
+  "obtenido": 200,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10",
+  "detalle": {
+    "filas": 69
+  }
+}

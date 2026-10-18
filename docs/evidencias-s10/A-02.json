@@ -1,0 +1,9 @@
+{
+  "id": "A-02",
+  "grupo": "Autenticación",
+  "caso": "Login VENDEDOR válido",
+  "esperado": 200,
+  "obtenido": 200,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10"
+}

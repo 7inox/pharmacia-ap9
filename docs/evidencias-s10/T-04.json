@@ -1,0 +1,10 @@
+{
+  "id": "T-04",
+  "grupo": "Token",
+  "caso": "Token firmado pero expirado",
+  "esperado": 401,
+  "obtenido": 401,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10",
+  "mensaje": "El token ha expirado. Inicie sesión nuevamente"
+}

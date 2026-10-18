@@ -1,0 +1,10 @@
+{
+  "id": "B-05",
+  "grupo": "B2",
+  "caso": "ADMIN no se quita ADMIN",
+  "esperado": 409,
+  "obtenido": 409,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:12",
+  "mensaje": "Un administrador no puede quitarse el rol ADMIN"
+}

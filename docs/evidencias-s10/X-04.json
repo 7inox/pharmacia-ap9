@@ -1,0 +1,10 @@
+{
+  "id": "X-04",
+  "grupo": "Autorización",
+  "caso": "ALMACENERO no consulta reportes",
+  "esperado": 403,
+  "obtenido": 403,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:11",
+  "mensaje": "No tiene permisos para realizar esta operación"
+}

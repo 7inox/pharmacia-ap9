@@ -1,0 +1,9 @@
+{
+  "id": "B-01",
+  "grupo": "B1",
+  "caso": "Cambio de contraseña correcto",
+  "esperado": 204,
+  "obtenido": 204,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:11"
+}

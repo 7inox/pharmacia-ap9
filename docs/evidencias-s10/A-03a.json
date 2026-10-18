@@ -1,0 +1,10 @@
+{
+  "id": "A-03a",
+  "grupo": "Autenticación",
+  "caso": "Usuario inexistente, mensaje uniforme",
+  "esperado": 401,
+  "obtenido": 401,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10",
+  "mensaje": "Usuario o contraseña incorrectos"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "B-04a",
+  "grupo": "B2",
+  "caso": "Token existente adopta roles actuales",
+  "esperado": 403,
+  "obtenido": 403,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:12",
+  "mensaje": "No tiene permisos para realizar esta operación"
+}

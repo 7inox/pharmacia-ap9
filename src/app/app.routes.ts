@@ -1,3 +1,19 @@
 import { Routes } from '@angular/router';
 import { MainLayout } from './layout/main-layout/main-layout';
-export const routes: Routes = [{ path: '', component: MainLayout, children: [{ path: '', pathMatch: 'full', redirectTo: 'inicio' }, { path: 'inicio', loadComponent: () => import('./features/inicio/inicio').then(m => m.Inicio) }, { path: 'clientes', loadChildren: () => import('./features/clientes/clientes.routes').then(m => m.CLIENTES_ROUTES) }, { path: 'productos', loadChildren: () => import('./features/productos/productos.routes').then(m => m.PRODUCTOS_ROUTES) }, { path: 'ventas', loadChildren: () => import('./features/ventas/ventas.routes').then(m => m.VENTAS_ROUTES) }, { path: 'reportes', loadChildren: () => import('./features/reportes/reportes.routes').then(m => m.REPORTES_ROUTES) }, { path: 'categorias', loadChildren: () => import('./features/categorias/categorias.routes').then(m => m.CATEGORIAS_ROUTES) }] }, { path: '**', loadComponent: () => import('./shared/pages/no-encontrado/no-encontrado').then(m => m.NoEncontrado) }];
+import { authGuard, permissionGuard } from './core/auth/auth.guard';
+
+export const routes: Routes = [
+  { path: 'login', loadComponent: () => import('./features/login/login').then(m => m.Login) },
+  { path: '', component: MainLayout, canActivate: [authGuard], children: [
+    { path: '', pathMatch: 'full', redirectTo: 'inicio' },
+    { path: 'inicio', loadComponent: () => import('./features/inicio/inicio').then(m => m.Inicio) },
+    { path: 'clientes', canActivate: [permissionGuard], data: {permission: 'CLIENTES_LEER'}, loadChildren: () => import('./features/clientes/clientes.routes').then(m => m.CLIENTES_ROUTES) },
+    { path: 'productos', canActivate: [permissionGuard], data: {permission: 'CATALOGO_LEER'}, loadChildren: () => import('./features/productos/productos.routes').then(m => m.PRODUCTOS_ROUTES) },
+    { path: 'ventas', canActivate: [permissionGuard], data: {permission: 'VENTAS_LEER'}, loadChildren: () => import('./features/ventas/ventas.routes').then(m => m.VENTAS_ROUTES) },
+    { path: 'reportes', canActivate: [permissionGuard], data: {permission: 'REPORTES_VER'}, loadChildren: () => import('./features/reportes/reportes.routes').then(m => m.REPORTES_ROUTES) },
+    { path: 'categorias', canActivate: [permissionGuard], data: {permission: 'CATALOGO_LEER'}, loadChildren: () => import('./features/categorias/categorias.routes').then(m => m.CATEGORIAS_ROUTES) },
+    { path: 'usuarios', canActivate: [permissionGuard], data: {permission: 'USUARIOS_ADMINISTRAR'}, loadComponent: () => import('./features/usuarios/usuarios').then(m => m.Usuarios) },
+    { path: 'cuenta', loadComponent: () => import('./features/cuenta/cuenta').then(m => m.Cuenta) }
+  ] },
+  { path: '**', loadComponent: () => import('./shared/pages/no-encontrado/no-encontrado').then(m => m.NoEncontrado) }
+];

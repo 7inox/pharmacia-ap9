@@ -1,0 +1,9 @@
+{
+  "id": "P-01",
+  "grupo": "Permisos",
+  "caso": "VENDEDOR lee catálogo",
+  "esperado": 200,
+  "obtenido": 200,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10"
+}

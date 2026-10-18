@@ -1,0 +1,10 @@
+{
+  "id": "U-01",
+  "grupo": "Usuarios",
+  "caso": "Anónimo no lista usuarios",
+  "esperado": 401,
+  "obtenido": 401,
+  "estado": "PASS",
+  "fecha": "2026-10-18T10:19:10",
+  "mensaje": "Debe iniciar sesión para acceder a este recurso"
+}
