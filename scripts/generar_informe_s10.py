@@ -5,7 +5,8 @@ from reportlab.lib import colors
 from reportlab.lib.enums import TA_CENTER, TA_LEFT
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib.units import cm
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, Image
+from reportlab.lib.utils import ImageReader
 
 root=Path(__file__).resolve().parents[1]
 evidence=root/"docs"/"evidencias-s10"
@@ -98,7 +99,40 @@ story += [P("Análisis y reproducción","TitleS10"),
           P("4. Ejecutar scripts/verify_s10.py con PHARMA_DEMO_PASSWORD definido. Revisar la matriz y sus JSON. La colección Postman requiere completar sus variables locales y ejecutar sobre datos de demostración."),
           P("9. Límites y próximos pasos","HeadS10"),
           P("La prueba se hizo en el Oracle local del curso. El perfil dev usa Hibernate ddl-auto:update; para despliegue se recomienda una migración versionada. El cierre de sesión limpia el token del navegador, pero un JWT copiado sigue válido hasta caducar si no cambió la contraseña ni se desactivó la cuenta. No se probó una carga multiusuario ni un despliegue remoto."),
-          P("La guía solicita trabajo en rama, colección, matriz e informe. Esta copia está en feature/seguridad-pruebas-tinoco. La entrega en B-Learning y el PR requieren acciones separadas; este informe registra solo el trabajo local verificado.","SmallS10")]
+          P("La guía solicita trabajo en rama, colección, matriz e informe. Esta copia está en feature/seguridad-pruebas-tinoco. La entrega en B-Learning y el PR requieren acciones separadas; este informe registra solo el trabajo local verificado.","SmallS10"),
+          P("Las páginas siguientes forman un anexo visual: capturas de la aplicación en Chrome y vistas de fragmentos exactos de los archivos locales. Los JSON muestran respuestas guardadas de las pruebas HTTP; la imagen de Postman muestra la colección, no una ejecución adicional.","SmallS10")]
+
+captures=root/"docs"/"capturas-s10"
+def screenshot(name,caption,max_width=17.3*cm,max_height=18.8*cm):
+    path=captures/name
+    assert path.exists(), f"Falta captura: {path}"
+    width,height=ImageReader(str(path)).getSize()
+    ratio=min(max_width/width,max_height/height)
+    img=Image(str(path),width=width*ratio,height=height*ratio)
+    img.hAlign="CENTER"
+    return [P(caption,"HeadS10"),img,Spacer(1,0.28*cm)]
+
+story += [PageBreak(),P("Anexo visual | Conexión y datos","TitleS10"),
+          P("Las vistas de código se generaron a partir de los archivos indicados en cada captura, con números de línea originales y fragmentos omitidos señalados. Las pantallas de la SPA se capturaron en Chrome sobre la instancia local.","SmallS10")]
+story += screenshot("05-conexion.jpg","Figura 1. Configuración dev: API 8081 y Oracle en localhost:1522/FREEPDB1.",max_height=10.0*cm)
+story += screenshot("02-categorias.jpg","Figura 2. Categorías cargadas en la SPA: 69 registros desde Oracle.",max_height=10.3*cm)
+
+annex=[
+    ("Seguridad del backend","06-seguridad.jpg","Figura 3. Reglas HTTP: JWT, permisos por operación, 401 y 403."),
+    ("Endpoints de la actividad autónoma","07-endpoints.jpg","Figura 4. Controladores para cambio de contraseña, roles y estado."),
+    ("Reglas de negocio","08-logica.jpg","Figura 5. BCrypt y protecciones para el administrador."),
+    ("Integración del frontend","09-frontend.jpg","Figura 6. Interceptor Bearer, cierre ante 401 y llamadas PUT/PATCH de usuarios."),
+    ("Respuestas JSON verificadas","10-json.jpg","Figura 7. B-01a devuelve 401 con token previo y C-01 confirma 69 filas Oracle."),
+    ("Colección Postman","11-postman.jpg","Figura 8. Estructura JSON de la colección S10 y prueba de estado HTTP."),
+]
+for title,name,caption in annex:
+    story += [PageBreak(),P("Anexo visual | "+title,"TitleS10")]
+    story += screenshot(name,caption)
+    story += [P("Fuente: archivo indicado dentro de la captura. La colección Postman usa variables locales; no se incluyen credenciales ni JWT reales.","SmallS10")]
+
+story += [PageBreak(),P("Anexo visual | Pantallas de usuario","TitleS10")]
+story += screenshot("03-usuarios.jpg","Figura 9. Administración de roles y estado de cinco cuentas de prueba.",max_height=10.7*cm)
+story += screenshot("04-cuenta.jpg","Figura 10. Vista Mi cuenta para el cambio de contraseña.",max_height=10.7*cm)
 
 def footer(canvas,document):
     canvas.saveState();w,h=document.pagesize
