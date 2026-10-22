@@ -31,7 +31,7 @@ export class AuthService {
         nombreCompleto: response.nombreCompleto,
         roles: response.roles,
         permisos: response.permisos,
-        expiresAt: Date.now() + response.expiresIn * 1000
+        expiraEn: Date.now() + response.expiresIn * 1000
       }) satisfies Session),
       tap(session => {
         sessionStorage.setItem(KEY, JSON.stringify(session));
@@ -43,7 +43,7 @@ export class AuthService {
 
   validSession(): Session | null {
     const session = this.state();
-    if (session && session.expiresAt > Date.now()) return session;
+    if (session && session.expiraEn > Date.now()) return session;
     if (session) this.closeExpired();
     return null;
   }
@@ -67,7 +67,7 @@ export class AuthService {
 
   private scheduleExpiration(session: Session): void {
     clearTimeout(this.expirationTimer);
-    const remaining = session.expiresAt - Date.now();
+    const remaining = session.expiraEn - Date.now();
     if (remaining <= 0) { this.closeExpired(); return; }
     this.expirationTimer = setTimeout(() => this.scheduleExpiration(session), Math.min(remaining, MAX_TIMEOUT));
   }
@@ -82,7 +82,7 @@ export class AuthService {
       if (!raw) return null;
       const session = JSON.parse(raw) as Session;
       if (typeof session.token === 'string' && session.token &&
-          typeof session.expiresAt === 'number' && session.expiresAt > Date.now() &&
+          typeof session.expiraEn === 'number' && session.expiraEn > Date.now() &&
           typeof session.username === 'string' &&
           typeof session.nombreCompleto === 'string' &&
           Array.isArray(session.roles) && Array.isArray(session.permisos)) return session;

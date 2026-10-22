@@ -25,5 +25,5 @@ export interface Session {
   nombreCompleto: string;
   roles: string[];
   permisos: Permiso[];
-  expiresAt: number;
+  expiraEn: number;
 }
