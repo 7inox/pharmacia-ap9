@@ -27,12 +27,11 @@ public class DemoSecurityData {
             Rol admin=role(roles,"ADMIN","Administración completa");
             Rol vendedor=role(roles,"VENDEDOR","Ventas y clientes");
             Rol almacenero=role(roles,"ALMACENERO","Catálogo e inventario");
-            Rol supervisor=role(roles,"SUPERVISOR","Rol de prueba sin permisos asignados");
-            user(empleados,usuarios,encoder,"admin", "90000001",admin,password);
-            user(empleados,usuarios,encoder,"vendedor", "90000002",vendedor,password);
-            user(empleados,usuarios,encoder,"almacen", "90000003",almacenero,password);
-            user(empleados,usuarios,encoder,"supervisor", "90000004",supervisor,password);
-            user(empleados,usuarios,encoder,"inactivo", "90000005",vendedor,password);
+            user(empleados,usuarios,encoder,"admin", "90000001",Set.of(admin),password);
+            user(empleados,usuarios,encoder,"vendedor", "90000002",Set.of(vendedor),password);
+            user(empleados,usuarios,encoder,"almacen", "90000003",Set.of(almacenero),password);
+            user(empleados,usuarios,encoder,"supervisor", "90000004",Set.of(vendedor,almacenero),password);
+            user(empleados,usuarios,encoder,"inactivo", "90000005",Set.of(vendedor),password);
         };
     }
     private Rol role(RolRepository repository,String name,String description) {
@@ -41,13 +40,23 @@ public class DemoSecurityData {
         });
     }
     private void user(EmpleadoRepository empleados,UsuarioRepository usuarios,PasswordEncoder encoder,
-            String username,String dni,Rol role,String password) {
-        if (usuarios.existsByUsernameIgnoreCase(username)) return;
+            String username,String dni,Set<Rol> assignedRoles,String password) {
+        if (usuarios.existsByUsernameIgnoreCase(username)) {
+            // Only repair the original demo supervisor; preserve other existing accounts.
+            if ("supervisor".equals(username)) usuarios.findByUsernameIgnoreCase(username).ifPresent(existing -> {
+                if (empleados.findById(existing.getEmpleado().getId()).map(Empleado::getDni).filter("90000004"::equals).isPresent()
+                        && existing.getRoles().stream().map(Rol::getNombre).collect(java.util.stream.Collectors.toSet()).equals(Set.of("SUPERVISOR"))) {
+                    existing.setRoles(assignedRoles);
+                    usuarios.save(existing);
+                }
+            });
+            return;
+        }
         Empleado e=new Empleado();e.setDni(dni);e.setNombres(username.substring(0,1).toUpperCase()+username.substring(1));
         e.setApellidos("Demostración");e.setCargo("Pruebas S10");e.setEmail(username+"@demo.local");
         e=empleados.save(e);
         Usuario u=new Usuario();u.setUsername(username);u.setPassword(encoder.encode(password));
-        u.setEmpleado(e);if(role!=null)u.setRoles(Set.of(role));
+        u.setEmpleado(e);u.setRoles(assignedRoles);
         if ("inactivo".equals(username)) u.setEstado(false);
         usuarios.save(u);
     }
