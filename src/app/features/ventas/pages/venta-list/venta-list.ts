@@ -6,7 +6,8 @@ import { VentaService } from '../../services/venta-service';
 import { Cliente } from '../../../clientes/models/cliente.model';
 import { EstadoVenta, FiltroVentas, Venta } from '../../models/venta.model';
 import { PaginaResponse } from '../../../../core/models/pagina-response';
-@Component({selector:'app-venta-list',imports:[ReactiveFormsModule,CurrencyPipe,DatePipe,RouterLink],templateUrl:'./venta-list.html',styleUrl:'../../ventas.css'})
+import { SiPermiso } from '../../../../shared/directives/si-permiso';
+@Component({selector:'app-venta-list',imports:[ReactiveFormsModule,CurrencyPipe,DatePipe,RouterLink,SiPermiso],templateUrl:'./venta-list.html',styleUrl:'../../ventas.css'})
 export class VentaList {
   private readonly servicio=inject(VentaService);private readonly fb=inject(NonNullableFormBuilder);
   readonly filtros=this.fb.group({clienteId:this.fb.control<number|null>(null),estado:this.fb.control<EstadoVenta|null>(null),desde:'',hasta:''});
