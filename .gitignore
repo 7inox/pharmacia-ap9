@@ -48,3 +48,9 @@ Thumbs.db
 /backend/classpath.txt
 /backend/compile-debug.log
 /backend/run.log
+
+# Secretos y logs de ejecución
+.env
+.env.*
+/logs/
+/backend/logs/
