@@ -15,3 +15,14 @@ spring:
       time-to-live: 10m
       enable-statistics: true
       cache-null-values: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  endpoint:
+    health:
+      show-details: when-authorized
+      roles: USUARIOS_ADMINISTRAR
+      probes:
+        enabled: true
