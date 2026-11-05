@@ -108,9 +108,9 @@ git push -u origin feature/spa-categorias-tinoco
 
 1. Ejecutar `npm ci` y `npm run build` en la raíz.
 2. Ejecutar `docker compose -f deploy/docker-compose.yml up -d`.
-3. En `backend`, empaquetar con `./mvnw clean package` (en Windows, `mvnw.cmd`). Configurar
-   `SPRING_PROFILES_ACTIVE=prod`, `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y `JWT_SECRET` por entorno.
-   La clave JWT es Base64 y debe tener al menos 32 bytes al decodificarla.
+3. Configurar `SPRING_PROFILES_ACTIVE=prod`, `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y
+   `JWT_SECRET` por entorno. La clave JWT es Base64 y debe tener al menos 32 bytes al decodificarla.
+   En `backend`, empaquetar con `./mvnw clean package` (en Windows, `.\mvnw.cmd clean package`).
 4. Iniciar `java -jar target/Practica-0.0.1-SNAPSHOT.jar`. El perfil prod usa el puerto 8080
    y valida el esquema Oracle existente. El perfil dev conserva el puerto 8081 y debe
    ejecutarse por separado de Nginx si usa su puerto predeterminado.
