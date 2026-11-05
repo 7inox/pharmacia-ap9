@@ -23,6 +23,6 @@ management:
   endpoint:
     health:
       show-details: when-authorized
-      roles: USUARIOS_ADMINISTRAR
+      roles: ADMIN
       probes:
         enabled: true
