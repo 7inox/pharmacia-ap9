@@ -9,18 +9,21 @@ spring:
     database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: update
-      show-sql: true
+    show-sql: false
 
-      properties:
-        hibernate:
-            format_sql: true
+    properties:
+      hibernate:
+        format_sql: false
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
   api-docs:
     enabled: true
 logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level [%X{requestId}] %logger{36} - %msg%n"
   level:
+    org.hibernate.SQL: DEBUG
     pe.edu.upeu.Practica: DEBUG
 app:
   jwt:

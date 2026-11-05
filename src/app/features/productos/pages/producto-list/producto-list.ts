@@ -9,8 +9,9 @@ import { Categoria } from '../../../categorias/models/categoria.model';
 import { Direccion, OrdenProducto, Producto } from '../../models/producto.model';
 import { PaginaResponse } from '../../../../core/models/pagina-response';
 import { mensajeError } from '../../../../core/utils/http-error';
+import { SiPermiso } from '../../../../shared/directives/si-permiso';
 
-@Component({ selector: 'app-producto-list', imports: [CurrencyPipe, RouterLink], templateUrl: './producto-list.html', styleUrl: './producto-list.css' })
+@Component({ selector: 'app-producto-list', imports: [CurrencyPipe, RouterLink, SiPermiso], templateUrl: './producto-list.html', styleUrl: './producto-list.css' })
 export class ProductoList implements OnInit {
   readonly categoriaId = input<string>();
   private inicializado = false;

@@ -103,3 +103,22 @@ git push -u origin main
 git push -u origin develop
 git push -u origin feature/spa-categorias-tinoco
 ```
+
+## Sesión 13 · producción local
+
+1. Ejecutar `npm ci` y `npm run build` en la raíz.
+2. Ejecutar `docker compose -f deploy/docker-compose.yml up -d`.
+3. Configurar `SPRING_PROFILES_ACTIVE=prod`, `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` y
+   `JWT_SECRET` por entorno. La clave JWT es Base64 y debe tener al menos 32 bytes al decodificarla.
+   En `backend`, empaquetar con `./mvnw clean package` (en Windows, `.\mvnw.cmd clean package`).
+4. Iniciar `java -jar target/Practica-0.0.1-SNAPSHOT.jar`. El perfil prod usa el puerto 8080
+   y valida el esquema Oracle existente. El perfil dev conserva el puerto 8081 y debe
+   ejecutarse por separado de Nginx si usa su puerto predeterminado.
+5. Abrir `http://localhost:8081`. Verificar `/actuator/health` en el backend (puerto 8080),
+   `docker compose -f deploy/docker-compose.yml ps` y el log `backend/logs/pharma-backend.log`.
+
+Redis se publica solo en loopback. Si Redis falla, las lecturas recurren a Oracle.
+Si se escribieron datos durante la caída y Redis conserva entradas, limpiar las cachés antes
+de reabrir el tráfico o esperar su TTL de diez minutos. Para un entorno público, terminar TLS
+en el proxy de entrada, aprovisionar el esquema mediante migraciones versionadas y gestionar
+los secretos con el proveedor de despliegue.
